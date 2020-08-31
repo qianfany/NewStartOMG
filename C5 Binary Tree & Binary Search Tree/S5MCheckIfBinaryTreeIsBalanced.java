@@ -30,16 +30,21 @@ public class S5MCheckIfBinaryTreeIsBalanced {
     base case:
     dont need call getHeight again
     Time: O(n)
+    use -1 to denote the tree is not balanced
+    >= 0 value means that tree is balanced and its the height of the tree
+    for lchild / rchild
+    two meanings: >= 0 : height(lchild);  -1: lchild is not balanced
+    two meanings: >= 0 : height(rchild);  -1: rchild is not balanced
+    for current layer
+    case 1: if lchild is not balanced or rchild is not balanced, then return -1
+    case 2: both balanced, check |height(lchild) - height(rchild)| <= 1
+    report to your parent, max(height(lchild), height(rchild) + 1; or -1 if not balanced)
      */
 
     public boolean isBalanced2 (TreeNode root) {
         if (root == null ) {
             return true;
         }
-        /*
-        use -1 to denote the tree is not balanced
-        >= 0 value means that tree is balanced and its the height of the tree
-         */
         return height(root) != -1;
     }
 

@@ -4,6 +4,7 @@ public class S5MQuickSort {
         [0 - i]     left of i   -> all number smaller than pivot
         [i - j]     unknown region
         [j - n - 1] right of j  -> all number bigger than pivot
+        Do it recursively
         Time: worst case (O(n^2))   Average case: O(n log n)
      */
     public int[] quickSort (int[] array) {

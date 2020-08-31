@@ -24,6 +24,8 @@
       <sourceFolder url="file://$MODULE_DIR$/C18 Cross Training I" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/C19 DFS II" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/C20 Midterm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C21 Cross Training II" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C22 Recursion III" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

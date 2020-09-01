@@ -8,7 +8,7 @@ public class S3ECommonNumberOfTwoSortedArrays {
         find in b common elements - O(n) in average
         Time: O(m + n) in average
         Space: O(n)
-    Sol 2. two pointer
+    ** Sol 2. two pointer
         Time: O(n + m)
         Space: O(1)
     Sol 3. binary search

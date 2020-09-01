@@ -1,7 +1,10 @@
 public class S6EMergeTwoSortedLinkedLists {
     /*
     merge
+    maintain a dummy node
     set pointer on each node
+    Time: O(n) n is the number of elements in the linkedList
+    Space: O(n)
      */
     public ListNode merge (ListNode one, ListNode two) {
         ListNode dummy = new ListNode(0);

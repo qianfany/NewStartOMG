@@ -5,14 +5,15 @@ import java.util.List;
 
 public class S15HPostOrderTraversalOfBinaryTreeIterative {
     /*
-    post order traverse can be down by using [root][right][left]
-    can be down with the modification of the iterative preOrder Traversal
+    post order traverse has the properties of [left][right][root]
+    pre order traverse with slight modification has the properties of [root][right][left]
+    can be down with the modification of the iterative preOrder Traversal then reverse
     However, everything will be store in memory before we can get the whole
     post order traversal
-
+    Solution:
     maintain a previous Node, to record the previous visiting node on the traversing
     path, so that we know what the direction we are taking now and what is the
-    direction we are taking next
+    direction we are taking next, maintain a stack to track previous nodes
 
     - root = stack.top
     if previous is null -> going down (left subtree has priority)

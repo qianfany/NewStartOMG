@@ -1,5 +1,6 @@
 public class S1ELongestConsecutive1s {
     /*
+    Dynamic Programming
     M[i] represents the longest contiguous 1s from the 0-th  element to i-th element
     base case: M[0] = A[0]
     Induction rule

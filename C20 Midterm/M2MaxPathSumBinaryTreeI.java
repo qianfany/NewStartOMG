@@ -1,4 +1,4 @@
-public class M2MaxPossibleSumNodeToNode {
+public class M2MaxPathSumBinaryTreeI {
     /*
 
         Left: maximum "root to leaf" path sum of left subtree

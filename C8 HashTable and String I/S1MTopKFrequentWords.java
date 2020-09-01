@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 public class S1MTopKFrequentWords {
     /*
     put every element into the hashMap <String, int>
-    value is teh frequency
+    value is the of that String frequency
     Maintain a MIN heap of size k, --> compare by frequency --> top k frequent candidates
     iterate over the hash_table <String, int>
     for each <String_i, int_i>,

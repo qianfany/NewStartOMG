@@ -1,20 +1,8 @@
-public class S2MReverseWordsInASentenceI {
-    /*
-    Assumptions:
-        1. the words are separated by one space character
-        2. There are no leading or trailing spaces
-        3. input is not null
-    try to convert it to char array and solve the problem in-place
-
-    I love Google  -> Google love I
-    step 1 swap the whole sentence -> legooG evol I
-    step 2 swap every single word (two pointer) -> Google love I
-    time: O(n)
-    Space: O(1)
-     */
+public class C3ReverseWordsInASentenceII {
 
     public String reverseWords (String input) {
-        char[] array = input.toCharArray();
+        String good = removeExtraSpace(input);
+        char[] array = good.toCharArray();
         reverse(array, 0, array.length - 1);
         int i = 0;
         for (int j = 0; j < array.length; j++) {
@@ -28,8 +16,8 @@ public class S2MReverseWordsInASentenceI {
             }
         }
         return new String(array);
-    }
 
+    }
     private void reverse (char[] array, int left, int right) {
         while (left < right) {
             char tmp = array[left];
@@ -38,5 +26,15 @@ public class S2MReverseWordsInASentenceI {
             left++;
             right--;
         }
+    }
+
+    private String removeExtraSpace (String input) {
+        return new String (input.trim().replaceAll("\\s{2,}", " "));
+    }
+
+    public static void main (String[] args) {
+        C3ReverseWordsInASentenceII sol = new C3ReverseWordsInASentenceII();
+        String input = " I love      Google";
+        System.out.println(sol.reverseWords(input));
     }
 }

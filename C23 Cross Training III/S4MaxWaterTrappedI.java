@@ -1,5 +1,9 @@
 public class S4MaxWaterTrappedI {
     /*
+                0   1   2   3   4
+                2   1   3   2   4
+                l               r
+                    1       1
     Two pointers
     try to do it in one iteration
     Initialize left pointer to 0 and right pointer to size - 1

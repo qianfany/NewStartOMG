@@ -28,6 +28,9 @@ public class S1EReverseString {
     Recursive reverse:
     Time: O(n)
     Space: O(n)
+    base case:  left >= right
+    swap(left, right)
+    sub problem:    reverse (array, left + 1, right - 1)
 
      */
     public String reverseI (String input) {

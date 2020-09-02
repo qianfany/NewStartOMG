@@ -1,20 +1,28 @@
 import java.util.*;
 
 public class S2ECommonNumbersOfTwoArraysII {
-
+    /*
+    two pointers
+    sort both array first, then do small and move
+    Time: O(n log n)
+    Space: O(1)
+     */
     public List<Integer> common (int[] A, int[] B) {
-        Set<Integer> set = new HashSet<>();
-        List<Integer> result = new ArrayList<>();
-
-        for (int i = 0; i < A.length; i++) {
-            set.add(A[i]);
-        }
-        for (int j = 0; j < B.length; j++) {
-            if (set.contains(B[j])) {
-                result.add(B[j]);
+        Arrays.sort(A);
+        Arrays.sort(B);
+        int i = 0, j = 0;
+        List<Integer> list = new ArrayList<>();
+        while (i < A.length && j < B.length) {
+            if (A[i] == B[j]) {
+                list.add(A[i]);
+                i++; j++;
+            }
+            else if (A[i] > B[j]) {
+                j++;
+            } else {
+                i++;
             }
         }
-        Collections.sort(result);
-        return result;
+        return list;
     }
 }

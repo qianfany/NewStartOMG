@@ -3,8 +3,12 @@ import java.util.Queue;
 
 public class S4MCheckIfBinaryTreeIsCompleted {
     /*
+    Definition of complete binary tree:
+    A binary tree is a complete binary tree if all the levels are completely filled
+    except possibly the last level and the last level has all keys as left as possible
+
     if we find a bubble, we cannot get number any more
-    algorithm: BFS
+    algorithm: BFS (Breath First Search)
     Data Structure: FIFO queue, flag: whether I detected bubbles
     Expand:
         When the flag is false, if the left child or the right child is null,

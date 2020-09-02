@@ -14,6 +14,10 @@ public class S1ECommonNumbersOfTwoArraysI {
     case 1: i <= j, result.append(a[i]); i++
     case 2: otherwise, result.append(a[j]); j++
 
+    use hashset
+    1 for input of A
+    2 for intersect
+
      */
     public List<Integer> common (int[] a, int[] b) {
         Set<Integer> set = new HashSet<>();

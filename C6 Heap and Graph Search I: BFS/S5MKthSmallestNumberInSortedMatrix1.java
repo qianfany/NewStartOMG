@@ -9,7 +9,7 @@ public class S5MKthSmallestNumberInSortedMatrix1 {
                6    8    13   18
 
     Data Structure Priority Queue
-    Algorithm: BFS2
+    Algorithm: BFS2 best first search
         1. initial state (start node): input[0][0]
         2. Node expansion/Generation:
             expand node[i][j]

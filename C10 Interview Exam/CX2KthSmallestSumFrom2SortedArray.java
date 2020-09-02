@@ -10,7 +10,12 @@ public class CX2KthSmallestSumFrom2SortedArray {
             1       3       5
        4    5       7       9
        8    9       11      13
-    Maintain a MinHeap 
+    Maintain a MinHeap
+    expand:
+        minHeap.poll()
+    Generate
+        minHeap.offer(i + 1, j, sum)
+        minheap.offer(i, j+1, sum)
     Dedup using a matrix which takes m * n space already
     could use hashSet to dedup minimize to space to k
     Time: O(k log k)

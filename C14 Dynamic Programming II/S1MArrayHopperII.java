@@ -1,7 +1,7 @@
 public class S1MArrayHopperII {
     /*
     minJump record the min-number of jumps from 0 to each of the indices
-    we do not need to jump for index 0
+    we do not need to jump from index 0
     base case: minJump[0] = 0
     Induction rule: minJump[i] represents the min-number of jumps from 0 to each of the indices
     M[i] = M[j] + 1     if minJump[j] != -1 && j + array[j] >= i    getmin
@@ -22,6 +22,7 @@ public class S1MArrayHopperII {
                     // can be reached
                     if (minJump[i] == -1 || minJump[i] > minJump[j] + 1) {
                         minJump[i] = minJump[j] + 1;
+                        // update the min
                     }
                 }
             }

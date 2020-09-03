@@ -7,6 +7,9 @@ public class S2MSearchInSortedMatrixI {
     left = 0, right = row * col - 1
     locate by matrix[mid/col][mid%col]
     Do binary search
+
+    Time: O(log n*m)
+    Space: O(1)
      */
     public int[] search (int[][] matrix, int target) {
         int[] result = {-1, -1};

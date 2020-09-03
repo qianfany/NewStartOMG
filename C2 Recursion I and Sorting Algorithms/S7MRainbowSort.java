@@ -4,7 +4,7 @@ public class S7MRainbowSort {
     /*
     two wall three region
     aaaaaaa bbbbb xxxxx ccccc
-            i     j   l
+            i     j   k
     i = 0 -> : all letter to the left-hand side of i (not including i) are all "a"
     j = 0 -> : all letters in [i, j) are all b's, j is the current index
     [j, k] unexplored area (including j and k)

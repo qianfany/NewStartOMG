@@ -3,6 +3,7 @@ import java.util.List;
 
 public class S11CombinationsForTelephonePadI {
     /*
+    Depth First Search
      level:
         number length
      branches:
@@ -12,7 +13,8 @@ public class S11CombinationsForTelephonePadI {
                            a     b      c
                       /  |  \  /  |  \ /  |  \
                      ad  ae af bd be bf cd ce cf
-
+     time: O(4 ^ n)
+     Space: O(n)
      */
     public String[] combination (int number) {
         List<String> result = new ArrayList<>();
@@ -28,6 +30,7 @@ public class S11CombinationsForTelephonePadI {
             return;
         }
         char[] chars = numToChar[number[level] - '0'].toCharArray();
+        // for the case of "0" and "1"
         if (chars.length == 0) {
             helper(number, numToChar, level + 1, sb, result);
         }

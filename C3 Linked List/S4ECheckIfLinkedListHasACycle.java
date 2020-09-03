@@ -7,6 +7,7 @@ public class S4ECheckIfLinkedListHasACycle {
                 \        /           2s = f        L + 1/4 C = C  L = 3/4 C which is the remaining distance
                  \______/
                                      set fast pointer back to the start, when when met, is the start of the pointer
+
     */
     public boolean hasCycle (ListNode head) {
         if (head == null || head.next == null) {

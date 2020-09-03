@@ -11,6 +11,8 @@ public class S2EGetKeysInBinaryTreeLayerByLayer {
     for each step:
         1. record the size (k) of queue
         2. k time expand + generate
+    Termination condition:
+        the queue is empty
     Time:   O(n)
     Space:  O(n)
      */

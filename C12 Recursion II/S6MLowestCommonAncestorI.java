@@ -1,6 +1,10 @@
 public class S6MLowestCommonAncestorI {
 
     /*
+    Assumptions:
+    1. There is no parent pointer for the nodes in binary tree
+    2. The given two nodes ar guaranteed to be in the binary tree
+
     case 1: a and b
         base case
             if current == a || current == b -> return current

@@ -5,6 +5,9 @@ public class S8MIsBinarySearchTreeOrNot {
                5(-inf,10)               15(10, +inf)
             /           \                 /              \
            2(-inf, 5)    7(5,7)        12(10,15)       20 (15, +inf)
+
+           Time: O(n)
+           Space: O(height)
      */
     public boolean isBST (TreeNode root) {
         return helper (root, Integer.MAX_VALUE, Integer.MIN_VALUE);

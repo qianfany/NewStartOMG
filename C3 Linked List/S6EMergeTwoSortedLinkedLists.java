@@ -3,6 +3,9 @@ public class S6EMergeTwoSortedLinkedLists {
     merge
     maintain a dummy node
     set pointer on each node
+    iterate through both node
+    termination condition:
+    one of the node is null, add the rest of the other node
     Time: O(n) n is the number of elements in the linkedList
     Space: O(n)
      */

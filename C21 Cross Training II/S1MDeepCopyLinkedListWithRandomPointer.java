@@ -22,14 +22,18 @@ public class S1MDeepCopyLinkedListWithRandomPointer {
         if (head == null) {
             return null;
         }
+        // dummy node to help construct the deep copy
         RandomListNode dummy = new RandomListNode(0);
         RandomListNode cur = dummy;
         Map<RandomListNode, RandomListNode> map = new HashMap<>();
         while (head != null) {
+            // copy current node if necessary
             if (!map.containsKey(head)) {
                 map.put(head, new RandomListNode(head.value));
             }
+            // connect the copied node to the deep copy list
             cur.next = map.get(head);
+            // copy the random node if necessary
             if (head.random != null) {
                 if (!map.containsKey(head.random)) {
                     map.put(head.random, new RandomListNode(head.random.value));

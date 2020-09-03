@@ -6,17 +6,20 @@ import java.util.List;
 public class M7MGetKeysInBinaryTreeLayerZigZagOrder {
     /*
     Data Structure
-    Deque: all nodes in the current level from left to right leve
+    Deque: all nodes in the current level from left to right leaf
     Algorithm:
         Initialize: deque = {root}
     In each step:
-        1. record the old size
+        1. record the old deque size
         2. odd level: from left to right expand
             a. generate left, insert to the right
             b. generate right, insert to the right
         3. even level: from right to left expand
             a. generate right, insert to the left of deque
             b. generate left, insert to the left
+     Termination Condition: the deque is empty
+     Time: O(n)
+     Space: O(n)
      */
     public List<Integer> zigZag (TreeNode root) {
         if (root == null) {
@@ -49,7 +52,7 @@ public class M7MGetKeysInBinaryTreeLayerZigZagOrder {
                     }
                 }
             }
-            layer = 1 - layer;
+            layer = 1 ^ layer;
         }
         return list;
 

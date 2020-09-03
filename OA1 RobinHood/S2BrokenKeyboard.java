@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class BrokenKeyboard {
+public class S2BrokenKeyboard {
     public int brokenKeyboard (String text, String[] letters) {
         Set<Character> set = new HashSet<>();
         for (String s : letters) {
@@ -26,7 +26,7 @@ public class BrokenKeyboard {
 
 
     public static void main (String[] args) {
-        BrokenKeyboard sol = new BrokenKeyboard();
+        S2BrokenKeyboard sol = new S2BrokenKeyboard();
         String text = "Hello, this is CodeSignal!";
         String[] letter = {"e", "i", "h", "l", "o", "s"};
         System.out.println(sol.brokenKeyboard(text, letter));

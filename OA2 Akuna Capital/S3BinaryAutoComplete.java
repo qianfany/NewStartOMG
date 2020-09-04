@@ -1,14 +1,12 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class S3BinaryAutoComplete {
 
-    public int[] autoComplete (String[] command, int n) {
-        int[] result = new int[n];
+    public List<Integer> autoComplete (List<String> command, int n) {
+        List<Integer> result = new ArrayList<>();
         Map<String, Integer> map = new HashMap<>();
-        for (int i = 0; i < command.length; i++) {
-            String s = command[i];
+        for (int i = 0; i < command.size(); i++) {
+            String s = command.get(i);
             int length = s.length();
             int index = i;
             while (length >= 1) {
@@ -23,7 +21,7 @@ public class S3BinaryAutoComplete {
                 map.put(s.substring(0, length), i + 1);
                 length--;
             }
-            result[i] = index;
+            result.add(index);
 
         }
         return result;
@@ -32,7 +30,11 @@ public class S3BinaryAutoComplete {
     public static void main (String[] args) {
         S3BinaryAutoComplete sol = new S3BinaryAutoComplete();
 
-        String[] command = {"000", "1110", "01", "001", "110", "11"};
-        System.out.println(Arrays.toString(sol.autoComplete(command, 6)));
+        String[] command = {"100110", "1001", "1001111"};
+        List<String> list = new ArrayList<>();
+        list.add("100110");
+        list.add("1001");
+        list.add("1001111");
+        System.out.println(sol.autoComplete(list, 3));
     }
 }

@@ -9,15 +9,19 @@ public class S2MQueueByTwoStacks {
         out = new LinkedList<>();
     }
     /*
-    stack1: is the only stack to store new elements when adding a new element into the queue
-    stack2: is the only stack to pop old element out of the queue
-            case 1: if stack2 is not empty, then we can just pop
-            case 2: if stack2 is empty, we move all data from stack1 to stack2 one by one, and then
-            pop out the top element from stack2
-     Time: O(1) amortize
-        Queue 5 6 7 8
-        stack1 [  5678
-        stack2 [  8765
+    Stack 1: is the only stack to store new elements when adding a new element into the queue
+    Stack 2: is the only stack to pop old element out of the queue
+        case 1: if the stack2 is not empty, we can just pop
+        case 2: if the stack2 is empty, we move all elements elements from stack1 to stack2 one by one,
+        and then pop out the top element from stack2
+
+    {5, 6, 7, 8}
+    stack1 [5 6 7 8
+    stack2 [
+
+    stack1 [
+    stack2 [8 7 6 5 ->
+    Time: O(1) amortize
      */
     private void Shuffle () {
         if (out.isEmpty()) {

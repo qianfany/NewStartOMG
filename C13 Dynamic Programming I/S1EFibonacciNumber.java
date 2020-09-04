@@ -1,8 +1,9 @@
 public class S1EFibonacciNumber {
     /*
     Dynamic Programming
-
+    base case:
     f[0] = 0    f[1] = 1
+    induction rule:
     f[i] = f[i- 1] + f[i - 2]
 
     Time:   O(n)

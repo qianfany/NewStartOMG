@@ -34,6 +34,7 @@
       <sourceFolder url="file://$MODULE_DIR$/OA2 Akuna Capital" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/C26 Trie" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/P2 Bloomberg Plan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/剑指Offer" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

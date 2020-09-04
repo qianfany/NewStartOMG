@@ -1,4 +1,4 @@
-public class S2MAtoThePowerOfB {
+public class S2MAtoThePowerOfBLite {
 
     /*
     Time : O(log b)

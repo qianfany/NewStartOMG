@@ -41,7 +41,7 @@ public class S6HReOrderArray {
         reOrder(array, left + (lmid - left) * 2, right);
     }
 
-    private  void reverse (int[] array, int left, int right) {
+    private void reverse (int[] array, int left, int right) {
         while (left < right) {
             int tmp = array[left];
             array[left] = array[right];

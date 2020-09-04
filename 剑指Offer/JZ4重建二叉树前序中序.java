@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class S6MReconstructBinaryTreeWithPreOrderAndInOrder {
+public class JZ4重建二叉树前序中序 {
     /*
     Traversing and construct the binary Tree using preOrder and inOrder
     the preOrder is [root][left][right]
@@ -25,33 +25,20 @@ public class S6MReconstructBinaryTreeWithPreOrderAndInOrder {
                 5   2 7         15      12 20
                 2   5   7       12    15    20
 
-     */
-    public TreeNode reconstruct (int[] inOrder, int[] preOrder) {
-        int[] preIndex = new int[] {0};
-        int[] inIndex = new int[] {0};
-        return helper (preOrder, inOrder, preIndex, inIndex, Integer.MAX_VALUE);
-    }
-
-    private TreeNode helper (int[] pre, int[] in, int[] preIndex, int[] inIndex, int target) {
-        if (inIndex[0] >= in.length || in[inIndex[0]] == target) {
-            return null;
-        }
-        TreeNode root = new TreeNode(pre[preIndex[0]]);
-        preIndex[0]++;
-        root.left = helper(pre, in, preIndex, inIndex, root.key);
-        inIndex[0]++;
-        root.right = helper(pre, in, preIndex, inIndex, target);
-        return root;
-    }
-    /*
-    solution 2: utilize the inorder sequence to determine the size of left/right subtrees
     Time: O(n)
     Space: O(n)
      */
-
-    public TreeNode reconstructI (int[] inOrder, int[] preOrder) {
-        Map<Integer, Integer> inIndex = indexMap(inOrder);
-        return helper(preOrder, inIndex, 0, inOrder.length - 1, 0, preOrder.length - 1);
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode (int x) {
+            val = x;
+        }
+    }
+    public TreeNode reconstruct (int[] pre, int[] in) {
+        Map<Integer, Integer> inIndex = indexMap (in);
+        return helper (pre, inIndex, 0, in.length - 1, 0, pre.length - 1);
     }
 
     private Map<Integer, Integer> indexMap (int[] in) {
@@ -69,7 +56,7 @@ public class S6MReconstructBinaryTreeWithPreOrderAndInOrder {
             return null;
         }
         TreeNode root = new TreeNode(pre[preLeft]);
-        int inMid = inIndex.get(root.key);
+        int inMid = inIndex.get(root.val);
         // recursion function returns the sub-tree root
         root.left = helper(pre, inIndex, inLeft, inMid - 1, preLeft + 1,
                 preLeft + inMid - inLeft);
@@ -77,17 +64,4 @@ public class S6MReconstructBinaryTreeWithPreOrderAndInOrder {
                 preRight + inMid - inRight + 1, preRight);
         return root;
     }
-
-
-
-
-
-    public static void main (String[] args) {
-        int[] pre = {10, 5, 2, 7, 15, 12, 20};
-        int[] in = {2, 5, 7, 10, 12, 15, 20};
-        S6MReconstructBinaryTreeWithPreOrderAndInOrder sol = new S6MReconstructBinaryTreeWithPreOrderAndInOrder();
-        sol.reconstruct(in, pre);
-    }
-
-
 }

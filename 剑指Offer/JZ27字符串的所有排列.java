@@ -1,9 +1,8 @@
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-public class S5HAllPermutationsII {
+public class JZ27字符串的所有排列 {
     /*
     String permutation with duplicate letters
     maintain a hashSet to deduplication
@@ -16,17 +15,18 @@ public class S5HAllPermutationsII {
      Time: O(n! * n)
      Space: O(n)
      */
-    public List<String> permutations (String input) {
-        List<String> result = new ArrayList<>();
-        if (input == null) {
+
+    public ArrayList<String> permutation (String str) {
+        ArrayList<String> result = new ArrayList<>();
+        if (str == null || str.length() == 0) {
             return result;
         }
-        char[] array = input.toCharArray();
+        char[] array = str.toCharArray();
         helper (array, 0, result);
         return result;
     }
 
-    private void helper (char[] array, int index, List<String> result) {
+    private void helper (char[] array, int index, ArrayList<String> result) {
         if (index == array.length) {
             result.add(new String(array));
             return;
@@ -40,6 +40,7 @@ public class S5HAllPermutationsII {
             }
         }
     }
+
     private void swap (char[] array, int left, int right) {
         char tmp = array[left];
         array[left] = array[right];

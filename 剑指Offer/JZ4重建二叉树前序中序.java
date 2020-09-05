@@ -28,14 +28,6 @@ public class JZ4重建二叉树前序中序 {
     Time: O(n)
     Space: O(n)
      */
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode (int x) {
-            val = x;
-        }
-    }
     public TreeNode reconstruct (int[] pre, int[] in) {
         Map<Integer, Integer> inIndex = indexMap (in);
         return helper (pre, inIndex, 0, in.length - 1, 0, pre.length - 1);
@@ -56,7 +48,7 @@ public class JZ4重建二叉树前序中序 {
             return null;
         }
         TreeNode root = new TreeNode(pre[preLeft]);
-        int inMid = inIndex.get(root.val);
+        int inMid = inIndex.get(root.key);
         // recursion function returns the sub-tree root
         root.left = helper(pre, inIndex, inLeft, inMid - 1, preLeft + 1,
                 preLeft + inMid - inLeft);

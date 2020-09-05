@@ -1,4 +1,4 @@
-public class S6EMergeTwoSortedLinkedLists {
+public class JZ16合并两个排序链表 {
     /*
     merge
     maintain a dummy node
@@ -10,23 +10,23 @@ public class S6EMergeTwoSortedLinkedLists {
     Time: O(n) n is the number of elements in the linkedList
     Space: O(n)
      */
-    public ListNode merge (ListNode one, ListNode two) {
+    public ListNode merge (ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0);
         ListNode cur = dummy;
-        while (one != null && two != null) {
-            if (one.value < two.value) {
-                cur.next = one;
-                one = one.next;
+        while (list1 != null && list2 != null) {
+            if (list1.value < list2.value) {
+                cur.next = list1;
+                list1 = list1.next;
             } else {
-                cur.next = two;
-                two = two.next;
+                cur.next = list2;
+                list2 = list2.next;
             }
             cur = cur.next;
         }
-        if (one != null) {
-            cur.next = one;
+        if (list1 != null) {
+            cur.next = list1;
         } else {
-            cur.next = two;
+            cur.next = list2;
         }
         return dummy.next;
     }

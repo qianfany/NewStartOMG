@@ -3,14 +3,6 @@ import java.util.ArrayList;
 import java.util.Deque;
 
 public class JZ3PrintLinkedListFromTailToHead {
-
-    public class ListNode {
-        int val;
-        ListNode next = null;
-        ListNode (int val) {
-            this.val = val;
-        }
-    }
     /*
     use stack: add all the number into the stack
     FILO
@@ -21,7 +13,7 @@ public class JZ3PrintLinkedListFromTailToHead {
         ListNode head = listNode;
         Deque<Integer> stack = new ArrayDeque<>();
         while (head != null) {
-            stack.offerFirst(head.val);
+            stack.offerFirst(head.value);
             head = head.next;
         }
         ArrayList<Integer> list = new ArrayList<>();

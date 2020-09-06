@@ -4,6 +4,8 @@ public class S3ERightShiftByNCharacters {
     reverse lppAeTree   0 - 8-n-1
     reverse lppAeerTe   8-n - 8
     reverse eTreeAppl   0 - 8
+    Time: O(n)
+    Space: O(1)
      */
     public String rightShift (String input, int n) {
         if (input.length() <= 1) {

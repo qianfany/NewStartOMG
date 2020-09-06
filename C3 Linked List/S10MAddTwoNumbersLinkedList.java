@@ -1,4 +1,4 @@
-public class S10MAddTwoNumbers {
+public class S10MAddTwoNumbersLinkedList {
     /*
     (2 -> 4 -> 3) + (5 -> 6 -> 4)
 

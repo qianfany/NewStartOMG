@@ -1,4 +1,4 @@
-public class S2MReverseWordsInASentenceI {
+public class JZ44反转一句话 {
     /*
     Assumptions:
         1. the words are separated by one space character
@@ -12,18 +12,18 @@ public class S2MReverseWordsInASentenceI {
     time: O(n)
     Space: O(1)
      */
-
-    public String reverseWords (String input) {
-        char[] array = input.toCharArray();
-        reverse(array, 0, array.length - 1);
+    public String reverseSentence (String str) {
+        char[] array = str.toCharArray();
+        reverse(array, 0, array.length -1);
         int i = 0;
+
         for (int j = 0; j < array.length; j++) {
             // start index of a word
             if (array[j] != ' ' && (j == 0 || array[j - 1] == ' ')) {
                 i = j;
             }
             // end index of a word
-            if (array[j] != ' ' && (j == array.length - 1 || array[j + 1] == ' ')) {
+            if (array[j] != ' ' && (j == array.length -1 || array[j + 1] == ' ')) {
                 reverse(array, i, j);
             }
         }
@@ -35,8 +35,7 @@ public class S2MReverseWordsInASentenceI {
             char tmp = array[left];
             array[left] = array[right];
             array[right] = tmp;
-            left++;
-            right--;
+            left++; right--;
         }
     }
 }

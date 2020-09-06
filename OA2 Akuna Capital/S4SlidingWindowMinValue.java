@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class S4DiskSpaceAnalysis {
+public class S4SlidingWindowMinValue {
     /*
     Sliding window
     use a deque
@@ -25,7 +25,7 @@ public class S4DiskSpaceAnalysis {
     }
 
     public static void main (String[] args) {
-        S4DiskSpaceAnalysis sol = new S4DiskSpaceAnalysis();
+        S4SlidingWindowMinValue sol = new S4SlidingWindowMinValue();
         int x = 3;
         List<Integer> space = new ArrayList<>();
         space.add(2);

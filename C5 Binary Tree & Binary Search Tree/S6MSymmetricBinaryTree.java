@@ -3,6 +3,11 @@ public class S6MSymmetricBinaryTree {
     Time: O(n/2) = O(n)
     recursion tree (n/2 nodes)
     Space: O(height)
+                4                                   4
+             /     \                             /     \
+            1       2                           2       1
+          /                                               \
+         6                                                  6
      */
     public boolean isSymmetric (TreeNode root) {
         if (root == null) {

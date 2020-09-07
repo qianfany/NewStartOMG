@@ -1,4 +1,4 @@
-public class S10MAddTwoNumbersLinkedList {
+public class L2AddTwoNumbers {
     /*
     (2 -> 4 -> 3) + (5 -> 6 -> 4)
      7 -> 0 -> 8
@@ -13,15 +13,14 @@ public class S10MAddTwoNumbersLinkedList {
     Time:   O(n)
     Space:  O(1)
      */
-
-    public ListNode addTwoNumber (ListNode l1, ListNode l2) {
+    public ListNode add (ListNode l1, ListNode l2) {
         ListNode dummy = new ListNode(0);
         ListNode cur = dummy;
         int carry = 0;
 
         while (l1 != null || l2 != null || carry != 0) {
             if (l1 != null) {
-                carry += l1.value;;
+                carry += l1.value;
                 l1 = l1.next;
             }
             if (l2 != null) {

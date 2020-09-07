@@ -3,6 +3,7 @@ import java.util.Set;
 
 public class S6E2Sum {
     /*
+    Clarification:
     return true or false or return index
     data size
     duplication (assume no duplication)

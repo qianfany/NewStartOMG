@@ -1,28 +1,28 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class S9MLongestSubstringWithoutRepeatingCharacters {
+public class L3LongestSubstringWithoutRepeatingCharacters {
     /*
        Assumptions: the input string is not null
        the distinct set contains all distinct characters the sliding window
        [slow, fast)
        if there is duplicate character, we need to move the slow pointer
-       otherwise, we have a new sliding window of containing all distinct characters   update longest
+       otherwise, we have a new sliding window of containing all distinct characters    update longest
        Time:    O(2n)
        Space:   O(n)
      */
-    public int longest (String input) {
+    public int length (String s) {
         Set<Character> distinct = new HashSet<>();
         int slow = 0;
         int fast = 0;
         int longest = 0;
-        while (slow < input.length() && fast < input.length()) {
-            if (distinct.contains(input.charAt(fast))) {
-                distinct.remove(input.charAt(slow));
+        while (slow < s.length() && fast < s.length()) {
+            if (distinct.contains(s.charAt(fast))) {
+                distinct.remove(s.charAt(slow));
                 slow++;
             }
             else {
-                distinct.add(input.charAt(fast));
+                distinct.add(s.charAt(fast));
                 fast++;
                 longest = Math.max(longest, fast - slow);
             }

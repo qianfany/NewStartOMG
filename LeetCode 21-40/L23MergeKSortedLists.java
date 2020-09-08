@@ -1,8 +1,7 @@
 import java.util.Comparator;
-import java.util.List;
 import java.util.PriorityQueue;
 
-public class S7MMergeKSortedLists {
+public class L23MergeKSortedLists {
     /*
     define n as the average length of array with k linkedList
 
@@ -41,10 +40,11 @@ public class S7MMergeKSortedLists {
     time: O(n*k log k)
     Extra space (k) creating a new linked list costs O(k) space online algorithm
      */
-    public ListNode merge (List<ListNode> listOfLists) {
-        if (listOfLists == null || listOfLists.size() == 0) return null;
-
-        PriorityQueue<ListNode> minHeap = new PriorityQueue<>(listOfLists.size(), new Comparator<ListNode>() {
+    public ListNode mergeKLists (ListNode[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+        PriorityQueue<ListNode> minheap = new PriorityQueue<>(lists.length, new Comparator<ListNode>() {
             @Override
             public int compare(ListNode o1, ListNode o2) {
                 if (o1.equals(o2)) {
@@ -57,17 +57,17 @@ public class S7MMergeKSortedLists {
         ListNode dummy = new ListNode(0);
         ListNode tail = dummy;
 
-        for (ListNode node : listOfLists) {
+        for (ListNode node : lists) {
             if (node != null) {
-                minHeap.add(node);
+                minheap.add(node);
             }
         }
 
-        while (!minHeap.isEmpty()) {
-            tail.next = minHeap.poll();
+        while (!minheap.isEmpty()) {
+            tail.next = minheap.poll();
             tail = tail.next;
             if (tail.next != null) {
-                minHeap.add(tail.next);
+                minheap.add(tail.next);
             }
         }
         return dummy.next;

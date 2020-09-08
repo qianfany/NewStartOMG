@@ -45,6 +45,7 @@
       <sourceFolder url="file://$MODULE_DIR$/LeetCode 141-160" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeetCode 161-180" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeetCode 181-200" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OA3 贝壳找房" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class S11CombinationsForTelephonePadI {
+public class L17LetterCombinationsOfAPhoneNumber {
     /*
-    corner case
-    use StringBuilder
     Depth First Search
      level:
         number length
@@ -18,12 +16,16 @@ public class S11CombinationsForTelephonePadI {
      time: O(4 ^ n)
      Space: O(n)
      */
-    public String[] combination (int number) {
+    public List<String> letterCombinations (String digits) {
+        char[] array = digits.toCharArray();
         List<String> result = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return result;
+        }
         String[] numToChar = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         StringBuilder sb = new StringBuilder();
-        helper (Integer.toString(number).toCharArray(), numToChar, 0, sb, result);
-        return result.toArray(new String[0]);
+        helper (array, numToChar, 0, sb, result);
+        return result;
     }
 
     private void helper (char[] number, String[] numToChar, int level, StringBuilder sb, List<String> result) {

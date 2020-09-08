@@ -6,7 +6,7 @@ public class S3MCombinationsOfCoins {
     Assumption: numbers are sorted in descending order
     Level: 4
     Branches: dynamic changing
-    Time: O(4 ^ 99)
+    Time: O(99 ^ 4)
     Space: O(4)
 
                                         (99)

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class S2MNQueen {
+public class L52NQueensII {
     /*
     Level by Level
                                 root = 0 queen
@@ -15,11 +15,11 @@ Time = O(8 ^ 8 * 8)  -> O(n^n * n)          -> O(n!)
         base case: The last row is done, 0 row left
         recursive rule: iff position(i,j) valid -> go to the next row (i + i)
      */
-    public List<List<Integer>> nQueens (int n) {
+    public int totalNQueen (int n) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> cur = new ArrayList<Integer>();
         helper(n, cur, result);
-        return result;
+        return result.size();
     }
     private void helper(int n, List<Integer> cur, List<List<Integer>> result){
         if (cur.size() == n){
@@ -43,5 +43,4 @@ Time = O(8 ^ 8 * 8)  -> O(n^n * n)          -> O(n!)
         }
         return true;
     }
-
 }

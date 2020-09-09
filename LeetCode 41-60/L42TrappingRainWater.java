@@ -1,4 +1,4 @@
-public class S4MaxWaterTrappedI {
+public class L42TrappingRainWater {
     /*
                 0   1   2   3   4
                 2   1   3   2   4
@@ -19,23 +19,23 @@ public class S4MaxWaterTrappedI {
      Time: O(n)
      Space: O(1)
      */
-    public int maxTrapped (int[] array) {
-        if (array.length == 0) {
+    public int trap (int[] height) {
+        if (height.length == 0) {
             return 0;
         }
-        int left = 0, right = array.length - 1;
+        int left = 0, right = height.length -1;
         int result = 0;
-        int lMax = array[left];
-        int rMax = array[right];
+        int lMax = height[left];
+        int rMax = height[right];
         while (left < right) {
-            if (array[left] <= array[right]) {
-                result += Math.max(0, lMax - array[left]);
-                lMax = Math.max(lMax, array[left]);
+            if (height[left] <= height[right]) {
+                result += Math.max(0, lMax - height[left]);
+                lMax = Math.max(lMax, height[left]);
                 left++;
             }
             else {
-                result += Math.max(0, rMax - array[right]);
-                rMax = Math.max(rMax, array[right]);
+                result += Math.max(0, rMax - height[right]);
+                rMax = Math.max(rMax, height[right]);
                 right--;
             }
         }

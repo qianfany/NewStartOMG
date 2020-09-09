@@ -1,4 +1,4 @@
-public class S1MArrayHopperII {
+public class L45JumpGameII {
     /*
     minJump record the min-number of jumps from 0 to each of the indices
     we do not need to jump from index 0
@@ -15,8 +15,8 @@ public class S1MArrayHopperII {
     Space = O(n)
 
      */
-    public int minJump (int[] array) {
-        int length = array.length;
+    public int jump (int[] nums) {
+        int length = nums.length;
         int[] minJump = new int[length];
 
         minJump[0] = 0;
@@ -24,7 +24,7 @@ public class S1MArrayHopperII {
             minJump[i] = -1;
             // initialized as unreachable
             for (int j = i - 1; j >= 0; j--) {
-                if (j + array[j] >= i && minJump[j] != -1) {
+                if (j + nums[j] >= i && minJump[j] != -1) {
                     // can be reached
                     if (minJump[i] == -1 || minJump[i] > minJump[j] + 1) {
                         minJump[i] = minJump[j] + 1;
@@ -34,5 +34,28 @@ public class S1MArrayHopperII {
             }
         }
         return minJump[length - 1];
+    }
+
+    // Time: O(n)
+    // Space: O(1)
+    /*
+        farthest    0   -> 2   ->    4
+        jumps       0   -> 1   ->    2
+        curEnd      0   -> 2   ->    4
+                    2       3       1       1       4
+                    0
+
+
+     */
+    public int jumpI (int[] nums) {
+        int jumps = 0, curEnd = 0, curFarthest = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            curFarthest = Math.max(curFarthest, i + nums[i]);
+            if (i == curEnd) {
+                jumps++;
+                curEnd = curFarthest;
+            }
+        }
+        return jumps;
     }
 }

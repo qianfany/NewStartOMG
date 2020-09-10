@@ -1,21 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class S12RestoreIPAddresses {
-    /*
-                                    25525511135
-                   /                         |                     \
-         2|5525511135                   25|525511135                255|525511135
-       /    |     \                 /       |       \             /     |       \
- 2|5|5...   2|55|...            25|5|2..   25|52|5..       255|5|2..    255|52|5... 255|525|1....
-
-     check condition:
-     not start "0"
-     part < 256
+public class L93RestoreIPAddresses {
+    /**
+     *                                     25525511135
+     *                    /                         |                     \
+     *          2|5525511135                   25|525511135                255|525511135
+     *        /    |     \                 /       |       \             /     |       \
+     *  2|5|5...   2|55|...            25|5|2..   25|52|5..       255|5|2..    255|52|5... 255|525|1....
+     *
+     *      check condition:
+     *      not start "0"
+     *      part < 256
+     *      Time: O()
+     *      Space: O()
+     * @param s input string
+     * @return  list of string of all possible IP addresses
+     *
      */
-    public List<String> Restore (String ip) {
+    public List<String> restoreIpAddress(String s) {
         List<String> res = new ArrayList<>();
-        restoreHelper(ip, res, "", 0, 0);
+        restoreHelper(s, res, "", 0, 0);
         return res;
     }
     private void restoreHelper(String s, List<String> res, String restored, int pos, int sec) {

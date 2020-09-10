@@ -1,5 +1,5 @@
 public class L64MinimumPathSum {
-    /*
+    /**
       1         3           1               1           4           5
       1         5           1               2           7           6
       4         2           1               6           8           7
@@ -13,7 +13,7 @@ public class L64MinimumPathSum {
 
       Time: O(nm)
       SPace: O(nm)
-     */
+     **/
     public int minPathSUm (int[][] grid) {
         int m = grid.length, n = grid[0].length;
         for(int i = 1; i < m; i++) {

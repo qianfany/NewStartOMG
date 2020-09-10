@@ -22,4 +22,20 @@ public class S1EFibonacciNumber {
         }
         return fib[K];
     }
+
+    //Time: O(n)
+    // space: O(1)
+    public long fibonacciI (int K) {
+        if (K <= 0) {
+            return 0;
+        }
+        long first = 0;
+        long second = 1;
+        for (int i = 2; i <= K; i++) {
+            long third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
 }

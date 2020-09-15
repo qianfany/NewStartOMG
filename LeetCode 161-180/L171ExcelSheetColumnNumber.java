@@ -1,4 +1,4 @@
-public class ExcelSheetColumnNumber {
+public class L171ExcelSheetColumnNumber {
 
     public int titleToNumber (String s) {
         int result = 0;

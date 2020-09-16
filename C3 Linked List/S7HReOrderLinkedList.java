@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class S7HReOrderLinkedList {
     /*
     N1 -> N2 -> N3 -> N4 -> Nn

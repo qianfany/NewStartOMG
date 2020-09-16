@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class S8MPartitionLinkedList {
     /*
     maintain to linkedList

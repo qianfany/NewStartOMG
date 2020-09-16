@@ -48,7 +48,8 @@
       <sourceFolder url="file://$MODULE_DIR$/OA3 贝壳找房" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OA3 Asana Plan" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CodeSignal Core" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CodeSignal Interview" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CodeSignal 1 Array LinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CodeSignal 2 Tree Hash" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

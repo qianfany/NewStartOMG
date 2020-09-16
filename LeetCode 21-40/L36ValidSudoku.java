@@ -4,6 +4,8 @@ import java.util.Set;
 public class L36ValidSudoku {
     /*
     Sudoku Properties
+    Using HashSet
+
     Check same row
     check same column
     Check same block
@@ -11,16 +13,19 @@ public class L36ValidSudoku {
     Space: O(n)
      */
     public boolean isValidSudoku (char[][] board) {
-        Set seen = new HashSet();
-        for (int i = 0; i < 9; i ++) {
-            for (int j = 0; j < 9; j++) {
-                char number = board[i][j];
-                if (number != '.') {
-                    if (!seen.add(number + "in row" + i) ||
-                    !seen.add(number + "in column" + j) ||
-                    !seen.add(number + "in block" + i/3 + "-" + j/3)) {
-                        return false;
-                    }
+        int n = board.length;
+        Set<String> set = new HashSet<>();
+        for (int row = 0; row < n; row++) {
+            for (int col = 0; col < n; col++) {
+                if (board[row][col] != '.' && !set.add(board[row][col] + "in row" + row)) {
+                    return false;
+                }
+                if (board[row][col] != '.' && !set.add(board[row][col] + "in col" + col)) {
+                    return false;
+                }
+                if (board[row][col] != '.' && !set.add(board[row][col] + "in square" +
+                        row / 3 + " " + col/3)) {
+                    return false;
                 }
             }
         }

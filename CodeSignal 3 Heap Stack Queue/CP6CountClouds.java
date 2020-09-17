@@ -1,18 +1,8 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class C4NumberOfIslands {
-    /*
-    Data Structure: BFS1
-    maintain a Queue and a 2d matrix for deduplication
-    linear scan the 2d grid, if a node contains a '1',
-    then do bfs, put it into the queue and set the visited to true
-    Iteratively search the neighbors of enqueued nodes until the queue
-    becomes empty
+public class CP6CountClouds {
 
-    Time: O(mn) m: No. rows     n: No. cols
-    Space: O(Min(M, N))
-     */
     class Node {
         int row;
         int col;
@@ -22,21 +12,21 @@ public class C4NumberOfIslands {
         }
     }
 
-    public int numIslands (char[][] grid) {
-        int h = grid.length;
+    public int countClouds (char[][] skyMap) {
+        int h = skyMap.length;
         if (h == 0) return 0;
-        int l = grid[0].length;
+        int l = skyMap[0].length;
         int islands = 0;
 
-        boolean[][] visited = new boolean[grid.length][grid[0].length];
+        boolean[][] visited = new boolean[skyMap.length][skyMap[0].length];
 
         Queue<Node> queue = new LinkedList<>();
 
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < l; j++) {
-                if (!visited[i][j] && grid[i][j] == '1') {
+                if (!visited[i][j] && skyMap[i][j] == '1') {
                     queue.add(new Node(i, j));
-                    BFS(queue, grid, visited);
+                    BFS(queue, skyMap, visited);
                     islands++;
                 }
             }
@@ -65,5 +55,16 @@ public class C4NumberOfIslands {
             queue.offer(new Node(row + 1, col));
             queue.offer(new Node(row - 1, col));
         }
+    }
+
+    public static void main (String[] args) {
+        CP6CountClouds sol = new CP6CountClouds();
+        char[][] skyMap = {
+                {'0', '1', '1', '0'},
+                {'0', '1', '1', '0'},
+                {'1', '0', '0', '1'},
+                {'0', '1', '1', '0'},
+        };
+        System.out.println(sol.countClouds(skyMap));
     }
 }

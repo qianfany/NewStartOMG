@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class C8RainbowSortII {
     /*
     sort between 4 colors
@@ -45,4 +47,46 @@ public class C8RainbowSortII {
         rainbowSort(colors, start, right, colorFrom, colorMid);
         rainbowSort(colors, left, end, colorMid + 1, colorTo);
     }
+    public int[] rainbowSort(int[] array) {
+        if(array == null || array.length < 2) {
+            return array;
+        }
+        int zero = 0;
+        int one = 0;
+        int two = array.length - 1;
+        int three = array.length - 1;
+        while(one <= two) {
+            int cur = array[one];
+            if(cur == 0) {
+                swap(array, one, zero);
+                one++;
+                zero++;
+            } else if(cur == 1) {
+                one++;
+            } else if(cur == 2) {
+                swap(array, one, two);
+                two--;
+            } else {
+                swap(array, one, three);
+                three--;
+                if(two > three) {
+                    two = three;
+                }
+            }
+        }
+        return array;
+    }
+
+    public static void main(String[] args) {
+        C8RainbowSortII solution = new C8RainbowSortII();
+        int[] array = {1, 3, 1, 2, 0};
+        System.out.println(Arrays.toString(solution.rainbowSort(array)));
+    }
+
+    public void swap(int[] array, int left, int right) {
+        int temp = array[left];
+        array[left] = array[right];
+        array[right] = temp;
+    }
+
 }

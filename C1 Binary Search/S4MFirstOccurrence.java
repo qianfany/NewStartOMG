@@ -2,6 +2,8 @@ public class S4MFirstOccurrence {
     /*
     termination condition: L & R are next to each other, jump out of the while loop
     do post-processing to find the nearest
+    Time; O(log n)
+    Space: O(1)
      */
     public int firstOccur (int[] array, int target) {
         if (array == null || array.length == 0) {
@@ -16,6 +18,7 @@ public class S4MFirstOccurrence {
                 right = mid;
             }
         }
+        // post process check the left one first
         if (array[left] == target) {
             return left;
         }

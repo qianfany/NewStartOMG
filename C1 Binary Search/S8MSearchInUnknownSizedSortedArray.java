@@ -5,6 +5,11 @@ public class S8MSearchInUnknownSizedSortedArray {
     jump out ---->  log10(n)  binary search ----> log2(10n)
     jump 10 is faster
 
+    log10 (n) + log2 (10n)     	vs 	log2 (n) + log2 (2n)
+
+    log 10 (n) - log2 (n) + (log2 (10n) - log2 (2n))
+    =     log 10 (n) - log2 (n)  + 2.3
+
      */
     interface Dictionary {
         public Integer get (int index);

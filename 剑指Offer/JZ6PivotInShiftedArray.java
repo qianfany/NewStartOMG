@@ -18,6 +18,9 @@ public class JZ6PivotInShiftedArray {
           high  = mid
      */
     public int minRotateArray (int[] array) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
         int left = 0, right = array.length - 1;
         while (left < right) {
             if (array[left] < array[right]) {

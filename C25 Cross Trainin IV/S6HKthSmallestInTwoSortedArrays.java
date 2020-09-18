@@ -1,15 +1,26 @@
 public class S6HKthSmallestInTwoSortedArrays {
     /**
-     * three base cases:
-     * 1. we already eliminate all the elements in a
-     * 2. we already eliminate all the elements in b
-     * 3. when k is reduced to 1
-     *
-     * we compare the k/2 th element in a's subarray
-     * and the k/2 th element in b's subarray
-     * to determine which k/2 partition can be surely included
-     * in the smallest k elements
-     *
+     Q6. Kth Closest Element in Two Sorted Arrays
+     Solution 1:
+     A[] = {2, 5, 7, 10, 13}
+     B[] = {1, 3, 4, 13, 20, 29}
+     k = 5, linear scan, Time O(k)
+
+     solution 2: Binary search:
+     We compare the k/2 th lament in a’s subarray and the k/2 th element in b’s subarray,
+     to determine which k/2 partition can be surely included in the smallest k elements
+     Divide and Conquer
+     if (X <= Y)
+     A[] = xxxxxxxxxxxxx X  [xxxxxxxxxxxxxxx
+     B[] = yyyyyyyyyyyyy] Y yyyyyyyyyyyyyyy
+     else
+     A[] = xxxxxxxxxxxxx] X xxxxxxxxxxxxxxx
+     B[] = yyyyyyyyyyyyy Y [yyyyyyyyyyyyyyy
+     Three base cases:
+     already eliminate all the elements in a
+     already eliminate all the elements in b
+     when k is reduced to 1
+     Time: O(log k)					Space: O(log k)
      */
     public int kth (int[] a, int[] b, int k) {
         return kth (a, 0, b, 0, k);

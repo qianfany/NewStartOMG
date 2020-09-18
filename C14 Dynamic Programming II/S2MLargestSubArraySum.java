@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class S2MLargestSubArraySum {
     /*
     Dynamic Programming
@@ -17,5 +19,29 @@ public class S2MLargestSubArraySum {
             result = Math.max(result, prev);
         }
         return result;
+    }
+
+    public int[] largestSumII (int[] array) {
+        int result = Integer.MIN_VALUE;
+        int prev = 0, start = 0, end = 0, s = 0;
+        for (int i = 0; i < array.length; i++) {
+            prev += array[i];
+            if (result < prev) {
+                result = prev;
+                start = s;
+                end = i;
+            }
+            if (prev < 0) {
+                prev = 0;
+                s = i  + 1;
+            }
+        }
+        return new int[] {result, start, end};
+    }
+
+    public static void main (String[] args) {
+        S2MLargestSubArraySum sol = new S2MLargestSubArraySum();
+        int[] array = {4, 2, -3, -2, 3, -1, -2, 6};
+        System.out.println(Arrays.toString(sol.largestSumII(array)));
     }
 }

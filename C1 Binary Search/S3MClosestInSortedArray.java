@@ -3,6 +3,8 @@ public class S3MClosestInSortedArray {
     Binary search
     narrow down to only two elements
     then do post processing to find the closest
+    Time: O(log n)
+    Space: O(1)
      */
     public int closest (int[] array, int target) {
         if (array == null || array.length == 0) {

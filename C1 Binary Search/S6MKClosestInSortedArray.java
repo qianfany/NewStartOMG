@@ -25,7 +25,7 @@ public class S6MKClosestInSortedArray {
         }
         return result;
     }
-
+    // similar to Last Occurrence
     public int largestSmallerEqual (int[] array, int target) {
         int left = 0, right = array.length - 1;
         while (left < right - 1) {

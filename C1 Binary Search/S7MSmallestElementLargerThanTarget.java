@@ -1,9 +1,10 @@
 public class S7MSmallestElementLargerThanTarget {
     /*
-    binary search
-
     narrow the range into only two element
-    Time: O(log n)
+    if array[mid] <= target 		left = mid + 1
+    else 				right = mid
+    Post Process, check left first
+    Time: O(log n)				Space: O(1)
      */
     public int smallestElementLargerThanTarget (int[] array, int target) {
         if (array == null || array.length == 0) {

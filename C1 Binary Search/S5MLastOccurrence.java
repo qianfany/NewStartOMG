@@ -6,6 +6,8 @@ public class S5MLastOccurrence {
         int left = 0, right = array.length - 1;
         while (left < right - 1) {
             int mid = left + (right - left) /2;
+            // if target = array[mid] this could be set as the
+            // left boundary
             if (array[mid] <= target) {
                 left = mid;
             }
@@ -13,6 +15,7 @@ public class S5MLastOccurrence {
                 right = mid;
             }
         }
+        // right first
         if (array[right] ==target) {
             return right;
         }

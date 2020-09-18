@@ -1,17 +1,16 @@
 public class C9SearchInShiftedSortedArrayI {
     /*
-    binary search
+    Binary Search
     case 1:     array[left] <= array[mid]
-        1.1 array[mid] > target && target >= array[left]
-                target between left & mid
-        1.2 otherwise
-                target between mid & right
-    case 2:     array[left] >= array[mid]
-        2.1 array[mid] < target && target <= array[right]
-                target between mid & right
-        2.2  otherwise
-                target between left & mid
-
+        1.1	array[mid] > target && target >= array[left]
+                target  in [left, mid -1]
+    1.2 	otherwise
+    target in [mid + 1, right]
+    case 2:    array[left] > array[mid]
+        2.1 	array[mid] < target && target <= array[right]
+                target in [mid + 1, right]
+        2.2 	otherwise
+                target in [left, mid - 1]
 
     Time: O(log n)
     Space: O(1)

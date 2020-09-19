@@ -1,8 +1,13 @@
 public class S8MPartitionLinkedList {
     /*
-    maintain to linkedList
-    small for all nodes smaller than target
-    larger for all nodes no smaller than target
+    input: 1 →  6  →  3  →   2a  →   5  →   2b  			and target = 4
+    result: 1  →   3  →  2a  →   2b  →   6   →   5
+     allocate two new linkedList heads (one for small values and one for large values)
+    iterate over every single element in the list, and compare with the current node’s
+    current.value < target.value  	add to tail of the small
+    add to the other linked list
+    Concatenate the tail of the first half to the head of the 2nd linked list
+    set the large list.next = null
      */
     public ListNode partition (ListNode head, int target) {
         if (head == null || head.next == null) {

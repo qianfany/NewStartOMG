@@ -19,4 +19,11 @@ public class S2EInOrderTraversalRecursive {
         res.add(root.key);
         helper(root.right, res);
     }
+
+    public void inorder (TreeNode root) {
+        if (root == null) return;
+        inOrder(root.left);
+        System.out.println(root.key);
+        inOrder(root.right);
+    }
 }

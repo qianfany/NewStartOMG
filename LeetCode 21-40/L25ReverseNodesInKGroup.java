@@ -25,4 +25,21 @@ public class L25ReverseNodesInKGroup {
         }
         return pre;
     }
+
+    public ListNode build (int[] array) {
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        for (int a : array) {
+            cur.next = new ListNode(a);
+            cur = cur.next;
+        }
+        return dummy.next;
+    }
+
+    public static void main (String[] args) {
+        L25ReverseNodesInKGroup sol = new L25ReverseNodesInKGroup();
+        int[] array = {1, 2, 3, 4, 5};
+        ListNode list = sol.build(array);
+        sol.reverseKGroup(list, 2);
+    }
 }

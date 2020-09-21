@@ -20,4 +20,11 @@ public class S3EPostOrderTraversalRecursive {
         helper(root.right, res);
         res.add(root.key);
     }
+
+    public void postorder (TreeNode root) {
+        if (root == null) return;
+        postorder(root.left);
+        postorder(root.right);
+        System.out.println(root.key);
+    }
 }

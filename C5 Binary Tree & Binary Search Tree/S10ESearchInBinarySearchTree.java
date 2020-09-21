@@ -13,4 +13,24 @@ public class S10ESearchInBinarySearchTree {
         }
         return cur;
     }
+
+    /**
+     * Sol 2. Recursive
+     * process root
+     * check left node if target less than root.key
+     * check right node if target greater than root.key
+     * Tail recursion
+     */
+
+    public TreeNode searchRecursive (TreeNode root, int key) {
+        if (root == null || root.key == key) {
+            return root;
+        }
+        if (key < root.key) {
+            return searchRecursive(root.right, key);
+        }
+        else {
+            return searchRecursive(root.left, key);
+        }
+    }
 }

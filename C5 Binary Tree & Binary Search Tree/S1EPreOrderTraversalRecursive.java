@@ -1,3 +1,5 @@
+import apple.laf.JRSUIUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,5 +20,12 @@ public class S1EPreOrderTraversalRecursive {
         res.add(root.key);
         helper (root.left, res);
         helper(root.right, res);
+    }
+
+    public void preOrderI (TreeNode root) {
+        if (root == null) return;
+        System.out.println(root.key);
+        preOrderI(root.left);
+        preOrderI(root.right);
     }
 }

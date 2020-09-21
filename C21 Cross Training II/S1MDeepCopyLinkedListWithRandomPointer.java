@@ -11,12 +11,21 @@ public class S1MDeepCopyLinkedListWithRandomPointer {
         }
     }
     /*
-    build the 1-1 connection between original node and copy node, avoid any original node was copied
-    more than once
-    Using HashMap to avoid copy multiple times for the same node
-    use dummy node
-    maintains the mapping between the node in the original list and the corresponding node in the
-    new list
+    Build the 1-1 connection between original node and copy node,
+    avoid any original node being copied more than once.
+    Using hashmap to avoid copy multiple times for the same location.
+    Using dummy node, maintaining the mapping between the node in the
+    original list and the corresponding node in the new list
+    HashMap<RandomListNode, RandomListNode>
+    key = Original Node
+    value = copied Node
+
+    N1   →    N2    →    N3    →    N4   →    N5   →   NULL
+    --------------------------->
+    |	     |	         |		 |	     |
+    Dum    N1’  →    N2’   →    N3’   →    N4’   →    N5’ →    NULL
+    --------------------------->
+
      */
     public RandomListNode copy (RandomListNode head) {
         if (head == null) {

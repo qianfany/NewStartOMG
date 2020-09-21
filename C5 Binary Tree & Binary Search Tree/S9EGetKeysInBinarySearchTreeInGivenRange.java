@@ -1,4 +1,6 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class S9EGetKeysInBinarySearchTreeInGivenRange {
@@ -32,5 +34,46 @@ public class S9EGetKeysInBinarySearchTreeInGivenRange {
         if (root.key < max) {
             getRange(root.right, min, max, list);
         }
+    }
+
+    public void rangeInOrder (TreeNode root, int lower, int upper) {
+        if (root == null) {
+            return;
+        }
+        if (root.key > lower) {
+            rangeInOrder(root.left, lower, upper);
+        }
+        if (root.key >= lower && root.key <= upper) {
+            System.out.print(root.key);
+        }
+        if (root.key < upper) {
+            rangeInOrder(root.right, lower, upper);
+        }
+    }
+
+    public List<Integer> getRangeI (TreeNode root, int min, int max) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            if (cur != null) {
+                stack.offerFirst(cur);
+                cur = cur.left;
+            }
+            else {
+                cur = stack.pollFirst();
+                if (cur.key > max) {
+                    break;
+                }
+                if (cur.key >= min && cur.key <= max) {
+                    list.add(cur.key);
+                }
+                cur = cur.right;
+            }
+        }
+        return list;
     }
 }

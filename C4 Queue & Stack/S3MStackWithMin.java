@@ -13,7 +13,7 @@ public class S3MStackWithMin {
     returns stack2.top()
 
     stack 1[   3  1 -7 -6 -8
-    stack 2[   3  1 -7 -8
+    stack 2[   3  1 -7 -7 -8
     stack1: is used to store input elements
     stack2: is used to store the min element so far in stack1
 

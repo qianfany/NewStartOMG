@@ -18,7 +18,7 @@ public class S12HLowestCommonAncestorIV {
         if (root == null) {
             return null;
         }
-        if (set.contains(root)) {
+        if (!set.add(root)) {
             return root;
         }
         TreeNode left = helper(root.left, set);

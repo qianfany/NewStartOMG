@@ -20,7 +20,7 @@ public class L124BinaryTreeMaximumPathSum {
 
 
      Time:  O(N)
-     Space: O(H)
+     Space: O(height)
      */
     public int maxPathSum (TreeNode root) {
         int[] max = new int[] {Integer.MIN_VALUE};
@@ -34,8 +34,8 @@ public class L124BinaryTreeMaximumPathSum {
         }
         int left = helper(root.left, max);
         int right = helper(root.right, max);
-        left = left < 0 ? 0 : left;
-        right = right < 0 ? 0 : right;
+        left = Math.max(left, 0);
+        right = Math.max(right, 0);
         max[0] = Math.max(root.key + left + right, max[0]);
         return root.key + Math.max(left, right);
     }

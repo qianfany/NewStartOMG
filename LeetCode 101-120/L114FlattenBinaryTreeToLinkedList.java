@@ -25,4 +25,17 @@ public class L114FlattenBinaryTreeToLinkedList {
         root.left = null;
         prev[0] = root;
     }
+    public static void main (String[] args) {
+        L114FlattenBinaryTreeToLinkedList sol = new L114FlattenBinaryTreeToLinkedList();
+        TreeNode root = new TreeNode(5);
+        TreeNode r2 = new TreeNode(2);
+        TreeNode r11 = new TreeNode(11);
+        TreeNode r6 = new TreeNode(6);
+        TreeNode r14 = new TreeNode(14);
+        root.left = r2;
+        root.right = r11;
+        r11.left = r6;
+        r11.right = r14;
+        sol.flatten(root);
+    }
 }

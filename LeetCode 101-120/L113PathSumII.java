@@ -5,7 +5,7 @@ public class L113PathSumII {
     /*
     Depth First search
     findPath: go from root to find the sum path
-    termination condition: root is the leaf and sum = root.key
+    condition: root is the leaf and sum = root.key
     go left and go right
 
                             5
@@ -18,20 +18,28 @@ public class L113PathSumII {
         Time: O(n)
         Space: O(n)
      */
-    private List<List<Integer>> result = new ArrayList<>();
-    private List<Integer> list = new ArrayList<>();
-    public List<List<Integer>> pathSum (TreeNode root, int sum) {
+
+    public List<List<Integer>> pathSumII (TreeNode root, int sum) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         if (root == null) {
-            return result;
+            return res;
+        }
+        helper(root, sum, list, res);
+        return res;
+    }
+
+    public void helper (TreeNode root, int sum, List<Integer> list, List<List<Integer>> res) {
+        if (root == null) {
+            return;
         }
         list.add(root.key);
         sum -= root.key;
         if (sum == 0 && root.left == null && root.right == null) {
-            result.add(new ArrayList<>(list));
+            res.add(new ArrayList<>(list));
         }
-        pathSum(root.left, sum);
-        pathSum(root.right, sum);
-        list.remove(list.size() - 1);   // backtrack
-        return result;
+        helper(root.left, sum, list, res);
+        helper(root.right, sum, list, res);
+        list.remove(list.size() - 1);   // backtracking
     }
 }

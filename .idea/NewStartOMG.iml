@@ -52,6 +52,7 @@
       <sourceFolder url="file://$MODULE_DIR$/CodeSignal 2 Tree Hash" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CodeSignal 3 Heap Stack Queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/C27 Tree Deserialization" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/C28 Tree Advance Topic" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

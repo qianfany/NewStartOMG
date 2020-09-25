@@ -1,16 +1,18 @@
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
-public class L95UniqueBinarySearchTreesII {
+public class Y42FindAllBinarySearchTree {
 
-    public List<TreeNode> generateTrees (int n) {
+    public List<TreeNode> generateBSTs(int n) {
         if (n == 0) {
-            return new ArrayList<>();
+            List<TreeNode> list = new ArrayList<>();
+            list.add(null);
+            return list;
         }
-        return genTree(1, n);
+        return genTree (1, n);
     }
-    public List<TreeNode> genTree (int start, int end) {
+
+    private List<TreeNode> genTree (int start, int end) {
         List<TreeNode> list = new ArrayList<>();
         if (start > end) {
             list.add(null);

@@ -18,6 +18,7 @@ public class S9EGetKeysInBinarySearchTreeInGivenRange {
     public List<Integer> getRange (TreeNode root, int min, int max) {
         List<Integer> list = new ArrayList<>();
         getRange(root, min, max, list);
+
         return list;
     }
 

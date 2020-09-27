@@ -7,7 +7,34 @@ public class S1MKSmallestInUnsortedArrayHeap {
     step 1: heapify all elements -> O(n)
     step 2: call pop() k times to get the k smallest element O(k log n)
     Time: O(n + k log n)
+    method 1 works best for smaller k's
+    */
+    public int[] kSmallestI (int[] array, int k) {
+        if (array == null || k == 0 || array.length == 0) {
+            return new int[0];
+        }
+        PriorityQueue<Integer> minheap = new PriorityQueue<>(k, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if (o1.equals(o2)) {
+                    return 0;
+                }
+                return o1 < o2 ? -1 : 1;
+            }
+        });
 
+        for (int i = 0; i < array.length; i++) {
+            minheap.offer(array[i]);
+        }
+        int[] result = new int[k];
+        for (int i = 0; i < k; i++) {
+            result[i] = minheap.poll();
+        }
+        return result;
+    }
+
+
+    /*
     Solution 2: (max Heap of size k -> smallest k candidates)  online algorithm
     step 1: heapfiy the first k elements to form a max-heap of size = k  O(k)
     step 2: Iterate over the remaining (n - k) elements one by one
@@ -17,7 +44,7 @@ public class S1MKSmallestInUnsortedArrayHeap {
                     otherwise: update(top -> new element)
             O((n - k) log k)
     Time: O(k + (n - k) log k)
-
+    works best for larger k
      */
     public int[] kSmallest (int[] array, int k) {
         if (array == null || k == 0 || array.length == 0) {

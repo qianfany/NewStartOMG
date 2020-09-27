@@ -17,7 +17,8 @@ public class S1MKSmallestInUnsortedArrayQuickSelect {
     otherwise
         recursively call on the right partition
 
-    Time: O(n)
+    Time: O(n) average time: n + n/2 + n/4 + ... + 1 = O(n)
+    worst time: O(n^2)
     Space: O(log n)
      */
     public int[] kSmallestII (int[] array, int k) {

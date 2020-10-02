@@ -86,7 +86,7 @@ public class S5MFactorCombination {
     }
 
     private void helper (int target, int index, List<List<Integer>> res, List<Integer> cur) {
-        if (target <= 1) {
+        if (target == 1) {
             if (cur.size() > 1) {
                 res.add(new ArrayList<>(cur));
             }

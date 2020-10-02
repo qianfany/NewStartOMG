@@ -3,6 +3,7 @@ import java.util.List;
 
 public class S2MAllSubsetsOfSizeK {
     /*
+    Assumption: no duplicate elements
                             {}
                         /          \
                       {a}           {}                              for a

@@ -4,13 +4,17 @@ import java.util.List;
 
 public class S8MAllSubsetsIISizeK {
     /*
-                                {}
+                            {}
                         /          \
                       {a}           {}                              for a
                    /      \       /      \
                 {a, b}    {a}    {b}      {}                        for b
-               /   \     /   \   /   \    /  \
-            abc    ab   ac    a  bc   b   c   {}                    for c
+               /     \     |
+            abb       ab   |                                        for b
+           /   \      |    |
+         abbb  abb    |    |                                        for b
+         /      /     |    |
+        abbbc abbc   abc   ac                                       for c
 
             add or not add
             level:      n

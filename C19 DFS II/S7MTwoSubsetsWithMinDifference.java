@@ -60,12 +60,10 @@ public class S7MTwoSubsetsWithMinDifference {
             }
             return;
         }
-
         curSum += array[index];
         dfs(curSum, count + 1, array, index + 1, sum, globalMin);
         curSum -= array[index];
         //add
-
         dfs(curSum, count, array, index + 1, sum, globalMin);
         // not add
     }

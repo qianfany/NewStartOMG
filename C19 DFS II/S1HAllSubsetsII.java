@@ -9,8 +9,12 @@ public class S1HAllSubsetsII {
                       {a}           {}                              for a
                    /      \       /      \
                 {a, b}    {a}    {b}      {}                        for b
-               /   \     /   \   /   \    /  \
-            abc    ab   ac    a  bc   b   c   {}                    for c
+               /     \     |
+            abb       ab   |                                        for b
+           /   \      |    |
+         abbb  abb    |    |                                        for b
+         /      /     |    |
+        abbbc abbc   abc   ac                                       for c
 
             add or not add
             level:      n
@@ -46,5 +50,11 @@ public class S1HAllSubsetsII {
             index++;
         }
         helper(array, sb, index + 1, result);
+    }
+
+    public static void main (String[] args) {
+        S1HAllSubsetsII sol = new S1HAllSubsetsII();
+        String set = "abbbc";
+        System.out.print(sol.subSet(set));
     }
 }

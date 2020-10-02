@@ -36,6 +36,6 @@ public class S6MPermutationsOfSubsets {
     private void swap (char[] array, int left, int right) {
         char tmp = array[left];
         array[left] = array[right];
-        array[right] = array[left];
+        array[right] = tmp;
     }
 }

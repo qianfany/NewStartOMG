@@ -9,7 +9,7 @@ public class S3LargestSquareSurroundedBy1 {
                 }
             }
         return global_max
-        Time = O(n^2) + O(n^2 * n) = O(n^n)
+        Time = O(n^2) + O(n^2 * n) = O(n^3)
      */
     public int largestSquareSurroundedByOne (int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {

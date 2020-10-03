@@ -1,5 +1,12 @@
 public class S5HLargestSquareOf1s {
     /*
+        { {0, 0, 0, 0},             0   0   0   0
+
+          {1, 1, 1, 1},             1   1   1   1
+
+          {0, 1, 1, 1},             0   1   2   2
+
+          {1, 0, 1, 1}}             1   0   1   2
     M[i][j] represents the max size of square with (i, j) as the bottom right corner
     M[i][j] = 0                                                 if A[i][j] == 0
             = min(M[i-1][j-1], M[i-1][j], M[i][j -1]) + 1     otherwise

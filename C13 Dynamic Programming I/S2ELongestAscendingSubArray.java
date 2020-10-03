@@ -5,8 +5,8 @@ public class S2ELongestAscendingSubArray {
     induction rule: define the solution relationship from the smaller problem to the larger problem
     M[i] represents [within the range from the beginning to the i-th element] the max length
     of the ascending subarray
-    M[i] = M[i - 1] + 1                         if input[i - 1] < input[i]
-         = 1                                    otherwise
+    case 1: if input[i - 1] < input[i]      M[i] = M[i - 1] + 1
+    case 2: otherwise                       1
          Time: O(n)
          Space: O(n)    ->O(1)
      */

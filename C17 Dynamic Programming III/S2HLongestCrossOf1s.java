@@ -16,6 +16,8 @@ public class S2HLongestCrossOf1s {
       1  2  1  1            1  3  1  1
       0  3  0  0            0  2  0  0
       0  4  0  0            0  1  0  0
+    left Up
+
 
       for each element in the input matrix
       M[i][j] = min (M1[i][j], M2[i][j], M3[i][j], M4[i][j])

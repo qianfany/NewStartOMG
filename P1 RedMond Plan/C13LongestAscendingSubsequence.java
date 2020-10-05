@@ -7,7 +7,7 @@ public class C13LongestAscendingSubsequence {
     M[i] = max[M[j]] + 1                if a[i] > a[j] and 0 <= j < i
             i                           if there is no such j
     Time: O(n ^ 2)
-    Space: O(1)
+    Space: O(n)
      */
     public int longest (int[] array) {
         if (array.length == 0) {

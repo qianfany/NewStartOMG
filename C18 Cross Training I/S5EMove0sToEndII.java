@@ -3,7 +3,7 @@ public class S5EMove0sToEndII {
     left:   all elements to the left side of left index are non-zeros
     right: fast pointer
     put all zeros to [left.....end)
-
+    Time: O(N)      Space: O(1)
      */
     public int[] moveZero (int[] array) {
         if (array.length <= 1) {

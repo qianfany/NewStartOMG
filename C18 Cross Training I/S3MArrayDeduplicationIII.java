@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class S3MArrayDeduplicationIII {
     /*
     remove duplicated and adjacent letters repeatedly
-    1 2 2 3 3 3-> 1
+    1 2 2 2 3
     1       2       2       2       3
     1
     1  set flag
@@ -12,7 +12,7 @@ public class S3MArrayDeduplicationIII {
     initialize f = 1, s = 0
     for each step
     if there is duplicate, set flag and do nothing
-    if array[i] != array[slow], and flag is set
+    if array[i] == array[slow], and flag is set
         array[slow] should not be included in the valid subarray
         we can just replace it with array[i] since next we are going to check if
         there is any duplicate of array[i]

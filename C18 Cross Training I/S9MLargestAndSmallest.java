@@ -1,12 +1,12 @@
 public class S9MLargestAndSmallest {
-
+    /*
+    indices will be paired up, the larger numbers of each pairs will be put on the left side
+    after the comparisons, the left half of the array are the larger values for each pairs
+    right half of the array are the smaller values for each pairs
+     */
     public int[] largestAndSmallest (int[] array) {
         int n = array.length;
-        /*
-        indices will be paired up, the larger numbers of each pairs will be put on the left side
-        after the comparisons, the left half of the array are the larger values for each pairs
-        right half of the array are the smaller values for each pairs
-         */
+
         for (int i = 0; i < n /2; i++) {
             if (array[i] < array[n - 1 - i]) {
                 swap(array, i, n - 1 - i);

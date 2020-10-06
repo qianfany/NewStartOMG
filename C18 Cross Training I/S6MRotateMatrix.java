@@ -6,7 +6,7 @@ public class S6MRotateMatrix {
     14  23  22  21  8                                       4
     13  12  11  10  9                    9                  5
 
-    split into levels and for eac level split it into four partitions
+    split into levels and for each level split it into four partitions
 
     Time: O(n^2)
     Space: O(1)
@@ -31,7 +31,5 @@ public class S6MRotateMatrix {
                 matrix[i][n - 1 -left] = tmp;
             }
         }
-
-
     }
 }

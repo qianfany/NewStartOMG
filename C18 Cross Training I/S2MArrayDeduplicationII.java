@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class S2MArrayDeduplicationII {
     /*
-    remove duplicate with smae value at least 3
+    remove duplicate with same value at least 3
     data structure
     slow: all elements to the left side of slow (excluding slow) pointer are the result for the elements
     that have been processed

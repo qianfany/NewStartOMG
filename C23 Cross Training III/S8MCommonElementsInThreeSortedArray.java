@@ -2,7 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class S8MCommonElementsInThreeSortedArray {
-
+    /*
+    since its sorted
+    if all three are the same, add to the result
+    otherwise, check the difference with other two
+     */
     public List<Integer> common (int[] a, int[] b, int[] c) {
         List<Integer> result = new ArrayList<>();
         int i = 0, j = 0, k = 0;

@@ -4,6 +4,11 @@ import java.util.Deque;
 public class L150EvaluateReversePolishNotation {
     /**
      * Use stack
+     * maintain a stack, linear scan through the array
+     * put the number into the stack
+     * whenever we met operators, poll two operators out
+     * do the operation and push it result into the stack
+     * termination condition, reach the end of the array
      * Time: O(n)
      * Space: O(n)
      * @param tokens

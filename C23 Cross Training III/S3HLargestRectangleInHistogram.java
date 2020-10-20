@@ -35,4 +35,9 @@ public class S3HLargestRectangleInHistogram {
         }
         return result;
     }
+    public static void main (String[] args) {
+        int[] array = {2, 1, 3, 4, 5, 2, 6};
+        S3HLargestRectangleInHistogram sol = new S3HLargestRectangleInHistogram();
+        System.out.println(sol.largest(array));
+    }
 }

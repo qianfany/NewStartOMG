@@ -1,12 +1,15 @@
 public class JZ18MirrorBinaryTree {
     /*
-    swap between left and right
 
+    base case: root == null
+                return
+    recursive rule:
+    swap between left and right
     the in current layer :
     swap root.left with root.right
-
     Mirror (root.left)
     Mirror (root.right)
+
     TIme: O(n)
     Space: O(h)
      */

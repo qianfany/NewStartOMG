@@ -6,6 +6,8 @@ public class JZ11NumberOf1In32Bits {
         otherwise
             bit at that position is 1
             count++;
+    Time: O(N)
+    Space: O(1)
 
      */
     public int numberOf1 (int n) {

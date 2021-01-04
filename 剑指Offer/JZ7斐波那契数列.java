@@ -20,4 +20,24 @@ public class JZ7斐波那契数列 {
         }
         return fib[target];
     }
+
+    /*
+    Only store 3 numbers in the memory
+    time: O(N)
+    Space: O(1)
+     */
+
+    public int fibonacciI (int n) {
+        if (n <= 0) {
+            return 0;
+        }
+        int first = 0;
+        int second = 1;
+        for (int i = 2; i <= n; i++) {
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
 }

@@ -1,5 +1,5 @@
 public class JZ1二维排序矩阵搜索II {
-    /*
+    /**
     Starts from the bottom left,
     case 1: matrix[row][col] > target
         go up
@@ -10,7 +10,7 @@ public class JZ1二维排序矩阵搜索II {
     search space reduction
     Time: O(n + m)
     Space: O(1)
-     */
+     **/
     public boolean Find (int target, int [][] array) {
         int row = array.length - 1;
         int col = 0;

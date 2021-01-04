@@ -20,4 +20,18 @@ public class JZ8跳房子1或2级 {
         }
         return fib[target];
     }
+
+    public int JumpFloor (int target) {
+        if (target <= 0) {
+            return 0;
+        }
+        int first = 0;
+        int second = 1;
+        for (int i = 2; i <= target + 1; i++) {
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
 }

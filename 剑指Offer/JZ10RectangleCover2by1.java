@@ -23,4 +23,21 @@ public class JZ10RectangleCover2by1 {
         }
         return dp[target];
     }
+
+    /*
+    Reduce space Complexity to O(1)
+     */
+    public int rectCoverI (int target) {
+        if (target <= 0) {
+            return 0;
+        }
+        int first = 1;
+        int second = 1;
+        for (int i = 2; i <= target; i++) {
+            int third = first + second;
+            first = second;
+            second = third;
+        }
+        return second;
+    }
 }

@@ -28,6 +28,7 @@ public class JZ4重建二叉树前序中序 {
     Time: O(n)
     Space: O(n)
      */
+
     public TreeNode reconstruct (int[] pre, int[] in) {
         Map<Integer, Integer> inIndex = indexMap (in);
         return helper (pre, inIndex, 0, in.length - 1, 0, pre.length - 1);
@@ -56,4 +57,5 @@ public class JZ4重建二叉树前序中序 {
                 preRight + inMid - inRight + 1, preRight);
         return root;
     }
+
 }

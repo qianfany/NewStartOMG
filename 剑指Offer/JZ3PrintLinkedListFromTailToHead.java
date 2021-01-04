@@ -5,6 +5,8 @@ import java.util.Deque;
 public class JZ3PrintLinkedListFromTailToHead {
     /*
     use stack: add all the number into the stack
+    67  ->  0  ->  24  -> 58
+    {58, 24, 0, 67}
     FILO
     Time:   O(n)
     Space:  O(n)

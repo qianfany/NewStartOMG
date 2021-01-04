@@ -1,8 +1,11 @@
 public class JZ12AToPowerB {
     /*
+     case 1:
      set exponent <= 0 && base == 0     throw new RuntimeException()
+     case 2:
      exponent < 0       return 1/ getPower(base, -exponent)
-     otherwise getPower (base, -exponent)
+     case 3:
+     otherwise getPower (base, exponent)
 
     Time : O(log (exponent))
     Extra Space: O(log (exponent))
@@ -27,7 +30,6 @@ public class JZ12AToPowerB {
         if (base == 0 && exponent > 0) {
             return 0;
         }
-
         if (exponent < 0) {
             return 1 / getPower(base, -exponent);
         }

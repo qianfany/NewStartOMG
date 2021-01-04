@@ -32,7 +32,7 @@ public class JZ5两个栈实现一个队列 {
     }
 
     public int pop () {
-        shuffle();
+        shuffle(); // shuffle only when stack2 is empty
         return stack2.pop();
     }
 }

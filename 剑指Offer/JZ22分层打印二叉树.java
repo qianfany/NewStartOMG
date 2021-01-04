@@ -20,7 +20,6 @@ public class JZ22分层打印二叉树 {
         if (root == null) {
             return result;
         }
-
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {

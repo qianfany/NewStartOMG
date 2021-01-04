@@ -25,4 +25,30 @@ public class JZ13OddFirstEvenAfter {
             }
         }
     }
+
+    /*
+    Create a new array for even number
+    iterate through the array,
+    put the odd number in the old array, keep track of the pointer
+    put all even number in the new array, keep track of the pointer
+    combine two array
+     */
+    public void reOrderArrayTime (int [] array) {
+        if (array == null) {
+            return;
+        }
+        int[] even = new int[array.length];
+        int indexOdd = 0;
+        int indexEven = 0;
+        for (int num : array) {
+            if ((num & 1) == 1) {
+                array[indexOdd++] = num;
+            } else {
+                even[indexEven++] = num;
+            }
+        }
+        for (int i = 0; i < indexEven; i++) {
+            array[indexOdd + i] = even[i];
+        }
+    }
 }

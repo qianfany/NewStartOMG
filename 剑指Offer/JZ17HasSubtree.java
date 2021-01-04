@@ -9,7 +9,8 @@ public class JZ17HasSubtree {
         return false
     recursive rule:
         check if root1.key == root2.key
-            if true:  recursively check the whole tree
+            if true:  recursively check the next TreeNode
+                      (root.left, subtree.left) && (root.right, subtree.right)
             otherwise: check if root1.left or root1.right
     Time:   O(mn)
     Space: O(n)

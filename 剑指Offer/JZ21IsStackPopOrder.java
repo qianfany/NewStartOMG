@@ -8,14 +8,13 @@ public class JZ21IsStackPopOrder {
     stack [ 1 2 3 4
 
     maintain a stack, add the element into the stack
-    linear scan and add all element in pushA into the stack
-    meanwhile
-    check stack.peek() == popA[i]
+    linear scan and add elements in pushA into the stack until match
+
     case 1: stack.peek() == popA[i]
         stack.pop; i++
     case 2:
         continue
-    termination condition: check the stack if its empty
+    termination condition: pushA is empty, check the stack is empty
     Time: O(n)
     Space: O(n)
      */

@@ -25,6 +25,9 @@ public class S6MReconstructBinaryTreeWithPreOrderAndInOrder {
                 5   2 7         15      12 20
                 2   5   7       12    15    20
 
+     Time: O(N)
+     Space: O(N)
+
      */
     public TreeNode reconstruct (int[] inOrder, int[] preOrder) {
         int[] preIndex = new int[] {0};

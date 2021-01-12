@@ -1,5 +1,6 @@
 public class JZ37GetANumberOccurrencesInSortedArray {
     /*
+    binary search
     find the first occurrence of the number
     then, linear scan right to find the number
     Time: O(log n + k)

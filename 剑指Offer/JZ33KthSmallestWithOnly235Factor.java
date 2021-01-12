@@ -9,7 +9,7 @@ public class JZ33KthSmallestWithOnly235Factor {
     we use the actual product value to represent the states <x,y,z>
     the value is 2^x * 3^y * 5^z and the initial state is <0, 0, 0>
 
-    Time: O(k log )
+    Time: O(k log k)
      */
     public int getUglyNumber (int index) {
         if (index <= 0) return 0;

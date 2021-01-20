@@ -2,7 +2,7 @@ public class L9PalindromeNumber {
     /*
     reverse the integer by half
     check if they are the same or x == rev / 10
-    time: O(n)
+    time: O(log_10 (n))
     Space: O(1)
      */
     public boolean isPalindrome (int x) {
@@ -13,5 +13,19 @@ public class L9PalindromeNumber {
             x = x / 10;
         }
         return x == rev || x == rev / 10;
+    }
+
+    public boolean isPalindromeI (int x) {
+        String str = String.valueOf(x);
+        int start = 0;
+        int end = str.length() - 1;
+        while (start < end) {
+            if (str.charAt(start) != str.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
     }
 }

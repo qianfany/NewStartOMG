@@ -3,17 +3,20 @@ import java.util.Map;
 
 public class L1TwoSum {
     /*
-    return true or false or return index
-    data size
-    duplication (assume no duplication)
-    sorted vs unsorted
-    data type: int
-    optimize for time or optimize for space
+    Clarification:
+
+    - return true or false or return index
+    - data size
+    - duplication (assume no duplication)
+    - sorted vs unsorted
+    - data type: int
+    - optimize for time or optimize for space
 
     Return exactly 1 pair of solution
     Maintain  Map<Integer, Integer>
     key: number     value: index of the number
     for each step: iterate through every element
+        put all elements into the map
     complement = target - nums[i]
     check if number is in the map
         if true

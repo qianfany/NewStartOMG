@@ -4,11 +4,10 @@ public class L2AddTwoNumbers {
      7 -> 0 -> 8
 
     maintain a dummy node for easy access of the head node
-    carry = carry + l1.value + l2.value
-    number on current node = carry % 10
-    carry over = carry / 10
+    sum = carry + l1.value + l2.value
+    number on current node = sum % 10
+    carry = carry / 10
     termination condition: when l1 == null && l2 == null && carry == 0
-
 
     Time:   O(n)
     Space:  O(1)

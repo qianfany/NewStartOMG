@@ -1,8 +1,9 @@
 public class L5LongestPalindromicSubstring {
     /*
+    2D
     Dynamic Programming:
-        i
-    j       b       a       b       a       d
+
+    j/i     b       a       b       a       d
     b       1       0       1       0       0
 
     a               1       0       1       0
@@ -12,6 +13,9 @@ public class L5LongestPalindromicSubstring {
     a                               1       0
 
     d                                       1
+
+    Time: O(N^2)
+    Space: O(N^2)
      */
     public String longestPalindrome (String s) {
         if (s == null || s.length() == 0) {

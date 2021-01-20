@@ -4,7 +4,7 @@ public class L6ZigZagConversion {
     characters in row 0 are located at indexes k(2 * numRows  - 2)
     Character in row numRows - 1 are at indexes k(2 * numRow - 2) + numRows - 1
     Time: O(n) n = len(s)
-    S[ace O(n)
+    Space O(n)
      */
     public String convert (String s, int numRows) {
         if (numRows == 1) return s;

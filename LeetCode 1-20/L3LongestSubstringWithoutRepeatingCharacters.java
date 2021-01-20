@@ -4,6 +4,7 @@ import java.util.Set;
 public class L3LongestSubstringWithoutRepeatingCharacters {
     /*
        Assumptions: the input string is not null
+       Maintain a HashSet
        the distinct set contains all distinct characters the sliding window
        [slow, fast)
        if there is duplicate character, we need to move the slow pointer

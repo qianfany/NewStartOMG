@@ -9,8 +9,8 @@ public class L36ValidSudoku {
     Check same row
     check same column
     Check same block
-    Time: O(n)
-    Space: O(n)
+    Time: O(81)
+    Space: O(81 * 3)
      */
     public boolean isValidSudoku (char[][] board) {
         int n = board.length;

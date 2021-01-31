@@ -10,7 +10,7 @@ public class L18FourSum {
     checking whether <i1, j1, i2, j2> have duplicate values
     2. when store a pair sum into the hash_table, we need to guarantee that its right index j
     in <i, j> as small as possible
-    Time: O(n^2)
+    Time: O(n^3)
     Space: O(n)
      */
 

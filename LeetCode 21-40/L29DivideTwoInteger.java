@@ -6,6 +6,8 @@ public class L29DivideTwoInteger {
     We converted them to negative instead of positive
     because the range of valid negative numbers is bigger,
     and therefore overflows can be cleanly avoided.
+    for each step, count how many times the divisor has to be added
+    to get the dividend. This is the quotient
 
     Time: O(n)
     Space: O(1)

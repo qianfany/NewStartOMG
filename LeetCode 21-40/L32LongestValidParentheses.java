@@ -3,9 +3,17 @@ import java.util.Deque;
 
 public class L32LongestValidParentheses {
     /*
+    Given a string containing just the characters '(' and ')',
+    find the length of the longest valid (well-formed) parentheses substring.
     Use stack
-
+    1. Scan the string from beginning to end
+    2. add -1 to the stack for reference
+    3. If current character is ')' and the
+    character at the index of the top of stack is '(', we just find
+    a matching pair so pop from the stack. and compute the length
     Only update result when we find a pair
+    4. Otherwise: push its index to the stack
+
     )()())
     stack [ -1, 0, 1
 

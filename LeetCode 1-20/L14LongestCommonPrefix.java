@@ -48,6 +48,7 @@ public class L14LongestCommonPrefix {
         for (int i =1; i < strs.length; i++) {
             while (strs[i].indexOf(pre) != 0) {
                 pre = pre.substring(0, pre.length() - 1);
+                // shorten the reference string
             }
         }
         return pre;

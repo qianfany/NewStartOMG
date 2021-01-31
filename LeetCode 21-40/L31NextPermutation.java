@@ -1,7 +1,12 @@
 public class L31NextPermutation {
     /*
+    Implement next permutation,
+    which rearranges numbers into the lexicographically
+    next greater permutation of numbers.
+
     find a[i] <= a[i+1]
     find a[j] >= a[i]
+
     1   5   8   4   7   6   5   3   1
                 i           j
     swap

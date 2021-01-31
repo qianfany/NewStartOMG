@@ -7,7 +7,8 @@ public class L39CombinationSum {
     Assumption: numbers are sorted in descending order
     Level: n
     Branches: dynamic changing
-    Time: O(n ^ target)
+    Time: O(n ^ target)  n = candidate.length
+
     Space: O(target)
 
                                         (99)

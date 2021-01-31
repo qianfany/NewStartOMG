@@ -3,9 +3,9 @@ public class L19RemoveNthNodeFromEndToList {
     two pointers:
     maintain a dummy node
     fast pointer slow pointer
-    let fast pointer move n nodes
+    let fast pointer move n nodes first
     then slow and fast starts together to move until fast moved to end
-    do remove
+    do remove operation
 
     Time:   O(n)
     Space:  O(1)

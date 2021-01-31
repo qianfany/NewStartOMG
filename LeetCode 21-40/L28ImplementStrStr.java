@@ -2,6 +2,7 @@ public class L28ImplementStrStr {
     /*
     Two pointer linear scan
     compare start any index of haystack compare with needle
+    termination condition: nIndex == needle.length()
     Time: O(m * n) where n is length of haystack and m is length of needle
     Space: O(1)
 

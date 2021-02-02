@@ -1,13 +1,11 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
+import java.util.*;
 
 public class L56MergeIntervals {
     /*
     Use greedy algorithm
-    sort the in descending order with respect to first number
+    sort the in ascending order with respect to start number
     check if interval overlap with the previous
-        update merge.getLast(1)
+        update newInterval[1] = Math.max(newInterval[1], interval[1])
     otherwise
         merge.add
 
@@ -24,15 +22,17 @@ public class L56MergeIntervals {
                 return o1[0] - o2[0];
             }
         });
-        LinkedList<int[]> merged = new LinkedList<>();
+        List<int[]> result = new ArrayList<>();
+        int[] newInterval = intervals[0];
+        result.add(newInterval);
         for (int[] interval : intervals) {
-            if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
-                merged.add(interval);
-            }
-            else {
-                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+            if (interval[0] <= newInterval[1]) {
+                newInterval[1] = Math.max(newInterval[1], interval[1]);
+            } else {
+                newInterval = interval;
+                result.add(newInterval);
             }
         }
-        return merged.toArray(new int[merged.size()][]);
+        return result.toArray(new int[result.size()][]);
     }
 }

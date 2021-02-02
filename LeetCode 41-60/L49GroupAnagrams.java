@@ -25,10 +25,10 @@ public class L49GroupAnagrams {
         return new ArrayList(map.values());
     }
 
-    /**
-     * instead of sorting, we can also build key string
-     * Time:  O(N * K)
-     * Space: O(N * K)
+    /*
+      instead of sorting, we can also build key string
+      Time:  O(N * K)
+      Space: O(N * K)
      */
     public List<List<String>> groupAnagramsI (String[] strs) {
         if (strs == null || strs.length == 0) return new ArrayList<>();

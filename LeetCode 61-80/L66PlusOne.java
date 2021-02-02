@@ -1,6 +1,7 @@
 public class L66PlusOne {
     /*
     won't have zero at digits[0]
+    special Case: 9999
     Time: O(n)
     Space: O(1)  O(N) special case
      */

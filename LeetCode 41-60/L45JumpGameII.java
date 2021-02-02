@@ -1,5 +1,7 @@
 public class L45JumpGameII {
     /*
+    Dynamic Programming
+
     minJump record the min-number of jumps from 0 to each of the indices
     we do not need to jump from index 0
     base case: minJump[0] = 0
@@ -39,6 +41,8 @@ public class L45JumpGameII {
     // Time: O(n)
     // Space: O(1)
     /*
+    by assuming that always reach the last index
+
         farthest    0   -> 2   ->    4
         jumps       0   -> 1   ->    2
         curEnd      0   -> 2   ->    4

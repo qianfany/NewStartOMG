@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationSequence {
+public class L60PermutationSequence {
 
     public String getPermutation (int n, int k) {
         int pos = 0;

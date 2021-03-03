@@ -16,15 +16,16 @@ public class L99RecoverBinarySearchTree {
     public void recoverTree (TreeNode root) {
         Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode x = null, y = null, pre = null;
+        TreeNode root1  = root;
 
-        while (!stack.isEmpty() || root != null) {
-            while (root != null) {
-                stack.offerFirst(root);
-                root = root.left;
+        while (!stack.isEmpty() || root1 != null) {
+            while (root1 != null) {
+                stack.offerFirst(root1);
+                root1 = root1.left;
             }
-            root = stack.pollFirst();
-            if (pre != null && root.key < pre.key) {
-                y = root;
+            root1 = stack.pollFirst();
+            if (pre != null && root1.key < pre.key) {
+                y = root1;
                 if (x == null) {
                     x = pre;
                 }
@@ -32,8 +33,8 @@ public class L99RecoverBinarySearchTree {
                     break;
                 }
             }
-            pre = root;
-            root = root.right;
+            pre = root1;
+            root1 = root1.right;
         }
         swap(x, y);
     }

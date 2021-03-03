@@ -1,27 +1,5 @@
 public class L123BestTimeToBuyAndSellStockIII {
     /**
-     * dynamic Programming
-     * dp[i] = max(dp[i - 1], prices[i] - prices[j] + dp[j - 2])
-     * j = [0... i -1]
-     *
-     *      3   3   5   0   0   3   1   4
-     *  0   0   0   2   2
-     *      min = 0
-     * @param prices
-     * @return
-     */
-    public int maxProfit (int[] prices) {
-        if (prices.length < 2) return 0;
-        int prev = 0, res = 0;
-        int min = prices[0];
-        for (int i = 1; i < prices.length; i++) {
-            min = Math.min(min, prices[i] - prev);
-            prev = res;
-            res = Math.max(res, prices[i] - min);
-        }
-        return res;
-    }
-    /**
      *
      *  bidirectional
      *  O(N) time

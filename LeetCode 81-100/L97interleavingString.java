@@ -1,26 +1,26 @@
 public class L97interleavingString {
-    /**
-     *      #       d       b       b       c       a
-     * #    1       0       0       0       0       0
-     *
-     * a    1       0       0       0       0       0
-     *
-     * a    1       1       1       1       1       0
-     *
-     * b    0       1       1       0       0       0
-     *
-     * c    0       0       1       1       1       1
-     *
-     * c    0       0       0       1       0       1
-     *
-     *       a    a   d   b   b   c   b   c   a   c
-     *
-     *  dp[i][j] implies if it is possible to obtain a subtring of length (i + j + 2)
-     *  which is a prefix of s3 by some interleaving of prefixes s1 and s2 having length of
-     *  (i+1) and (j+1)
-     *  case 1: character just included either at ith index of s1 or at jth index of s2
-     *  doesn't match the character at kth index of s3                  dp[i][j] = false
-     *  otherwise:                                                      cp[i][j] = true
+    /*
+           #       d       b       b       c       a
+      #    1       0       0       0       0       0
+
+      a    1       0       0       0       0       0
+
+      a    1       1       1       1       1       0
+
+      b    0       1       1       0       0       0
+
+      c    0       0       1       1       1       1
+
+      c    0       0       0       1       0       1
+
+            a    a   d   b   b   c   b   c   a   c
+
+       dp[i][j] implies if it is possible to obtain a substring of length (i + j + 2)
+       which is a prefix of s3 by some interleaving of prefixes s1 and s2 having length of
+       (i+1) and (j+1)
+       case 1: character just included either at ith index of s1 or at jth index of s2
+       doesn't match the character at kth index of s3                  dp[i][j] = false
+       otherwise:                                                      cp[i][j] = true
      */
     public boolean isInterLeave (String s1, String s2, String s3) {
         if(s1.length()+s2.length() != s3.length()){

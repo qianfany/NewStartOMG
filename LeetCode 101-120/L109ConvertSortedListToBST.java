@@ -1,14 +1,14 @@
 public class L109ConvertSortedListToBST {
-    /**
-     * PreOrder Traversal to whole list, find the mid point
-     * if left == right, then there is no elements available
-     * root = TreeNode middle
-     * compute recursively left and right subtrees root.left = helper (left, p - 1)
-     * root.right = helper (p+1, right)
-     * Time: O(n log n)
-     * Space: O(n)
-     * @param head
-     * @return
+    /*
+      PreOrder Traversal to whole list, find the mid point
+      if left == right, then there is no elements available
+      root = TreeNode middle
+      compute recursively left and right subtrees root.left = helper (left, p - 1)
+      root.right = helper (p+1, right)
+      Time: O(n log n)
+      Space: O(n)
+      @param head
+      @return
      */
     public TreeNode sortedListToBST (ListNode head) {
         if (head == null) {

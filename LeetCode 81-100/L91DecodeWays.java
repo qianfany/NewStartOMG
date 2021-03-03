@@ -2,19 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class L91DecodeWays {
-    /**
-     *              2   3   2   6
-     *              /           \
-     *          (2)326          (23)26
-     *         /    \             /  \
-     *  (2)(3)26  (2)(32)6(X)  (23)(2)6   (23)(26)(Y)
-     *   /
-     *        2 branches, left, add one, right, add number
-     *         Time: O(2^n)
-     *         Space: O(n)
-     *
-     * @param s input string
-     * @return  number of ways to encode the string
+    /*
+                   2   3   2   6
+                   /           \
+               (2)326          (23)26
+              /    \             /  \
+       (2)(3)26  (2)(32)6(X)  (23)(2)6   (23)(26)(Y)
+        /
+             2 branches, left, add one, right, add number
+              Time: O(2^n)
+              Space: O(n)
+
+      @param s input string
+      @return  number of ways to encode the string
      */
     public int numDecodings (String s) {
         List<String> res = new ArrayList<>();

@@ -3,9 +3,9 @@ public class L86PartitionList {
     initialize two dummy node
     linear scan to whole linked list
     case 1: head < x
-        small.next = head   small = small.next
+        curSmall.next = head   curSmall = curSmall.next
     case 2: head >= x
-        large.next = large  large = large.next
+        curLarge.next = head  curLarge = curLarge.next
 
     post processing,
     curSmall.next = large.next

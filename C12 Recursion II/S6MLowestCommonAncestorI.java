@@ -18,15 +18,15 @@ public class S6MLowestCommonAncestorI {
                 return myself
 
      */
-    public TreeNode lowestCommonAncestor (TreeNode root, TreeNode one, TreeNode two) {
+    public TreeNode lowestCommonAncestor (TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {
             return null;
         }
-        if (root == one || root == two) {
+        if (root == p || root == q) {
             return root;
         }
-        TreeNode left = lowestCommonAncestor(root.left, one, two);
-        TreeNode right = lowestCommonAncestor(root.right, one, two);
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left != null && right != null) {
             return root;
         }

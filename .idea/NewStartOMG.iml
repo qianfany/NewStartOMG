@@ -59,6 +59,9 @@
       <sourceFolder url="file://$MODULE_DIR$/CodeSignal Daily Challenge" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CodeSignal 4 BFS &amp; DFS" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/牛客 练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/P4 Huawei Plan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/P5 InfStones Plan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/双指针" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

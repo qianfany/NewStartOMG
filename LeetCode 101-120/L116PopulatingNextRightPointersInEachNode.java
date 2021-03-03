@@ -20,12 +20,12 @@ public class L116PopulatingNextRightPointersInEachNode {
         }
     }
 
-    /**
-     * Breath First Search
-     * keep track of number of queue, in the same queue means in the same level from
-     * left to right
-     * Time: O(n)
-     * Space: O(n)
+    /*
+      Breadth First Search
+      keep track of number of queue, in the same queue means in the same level from
+      left to right
+      Time: O(n)
+      Space: O(n)
      * @param root
      * @return
      */

@@ -2,12 +2,12 @@ import java.util.*;
 
 public class Y18HLowestCommonAncestorIII {
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode one, TreeNode two) {
-        TreeNode lca = LCA(root, one, two);
-        if(lca == one) {
-            return findNode(one, two)? lca : null;
-        } else if(lca == two) {
-            return findNode(two, one)? lca : null;
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        TreeNode lca = LCA(root, p, q);
+        if(lca == p) {
+            return findNode(p, q)? lca : null;
+        } else if(lca == q) {
+            return findNode(q, p)? lca : null;
         }
         return lca;
     }

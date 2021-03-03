@@ -1,5 +1,5 @@
 public class L160IntersectionOfTwoLinkedLists {
-    /**
+    /*
     0 -> 1 -> 2 -> 3 -> 4 -> 5 -> null
     a -> b -> 4 -> 5 -> null
     connect them together, first common point is shown

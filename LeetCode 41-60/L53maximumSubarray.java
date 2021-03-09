@@ -1,8 +1,8 @@
 public class L53maximumSubarray {
     /*
     Dynamic Programming
-    {2, -1, 4, -2, 1}
-
+    {-2, 1, -3, 4, -1, 2, 1, -5, 4}
+    [-2, -1, -3, 4, 3, 5, 6, 1, 5]
     OPT (i) represents the largest subarray sum at the array index i (include the index)
     base case: OPT(0) = array[0]
     Induction rule: OPT(i) = Max(array[i] + OPT(i - 1), OPT(i))

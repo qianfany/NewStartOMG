@@ -3,7 +3,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class L95UniqueBinarySearchTreesII {
-
     public List<TreeNode> generateTrees (int n) {
         if (n == 0) {
             return new ArrayList<>();

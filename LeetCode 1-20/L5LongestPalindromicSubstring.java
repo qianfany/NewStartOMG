@@ -2,6 +2,11 @@ public class L5LongestPalindromicSubstring {
     /*
     2D
     Dynamic Programming:
+    Base case:
+    Induction Rule:
+    both characters are same && (the previous string is palindromic)
+    s.charAt(i) == s.charAt(j) && (i - j <= 2 || dp[j + 1][i - 1])
+    update max length, start and end point
 
     j/i     b       a       b       a       d
     b       1       0       1       0       0

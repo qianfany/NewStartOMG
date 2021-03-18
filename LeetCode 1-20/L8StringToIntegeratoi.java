@@ -33,6 +33,7 @@ public class L8StringToIntegeratoi {
             i++;
         }
         sum = positive ? sum : -sum;
+        // case 5
         if (sum > (long) Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
         }

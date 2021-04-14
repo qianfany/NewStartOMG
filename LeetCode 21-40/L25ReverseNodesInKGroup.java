@@ -36,6 +36,31 @@ public class L25ReverseNodesInKGroup {
         return dummy.next;
     }
 
+    public ListNode reverseKGroupIterative (ListNode head, int k) {
+        if (head == null || k == 1) return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode cur = dummy, next = dummy, pre = dummy;
+        int count = 0;
+        while (cur.next != null) {
+            cur = cur.next;
+            count++;
+        }
+        while (count >= k) {
+            cur = pre.next;
+            next = cur.next;
+            for (int i = 1; i < k; i++) {
+                cur.next = next.next;
+                next.next = pre.next;
+                pre.next = next;
+                next = cur.next;
+            }
+            pre = cur;
+            count -= k;
+        }
+        return dummy.next;
+    }
+
     public static void main (String[] args) {
         L25ReverseNodesInKGroup sol = new L25ReverseNodesInKGroup();
         int[] array = {1, 2, 3, 4, 5};

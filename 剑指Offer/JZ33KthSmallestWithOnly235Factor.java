@@ -33,13 +33,13 @@ public class JZ33KthSmallestWithOnly235Factor {
         return minHeap.peek().intValue();
     }
 
-    public int getUglyNumberI (int index) {
-        if (index <= 0) return 0;
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(index);
+    public int getUglyNumberI (int n) {
+        if (n <= 0) return 0;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>(n);
         Set<Integer> visited = new HashSet<>();
         minHeap.offer(1);
         visited.add(1);
-        while (index > 1) {
+        while (n > 1) {
             int current = minHeap.poll();
             if (visited.add(2 * current)) {
                 minHeap.offer(2 * current);
@@ -50,7 +50,7 @@ public class JZ33KthSmallestWithOnly235Factor {
             if (visited.add(5 * current)) {
                 minHeap.offer(5 * current);
             }
-            index--;
+            n--;
         }
         return minHeap.peek();
     }

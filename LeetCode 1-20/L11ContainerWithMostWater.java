@@ -13,6 +13,8 @@ public class L11ContainerWithMostWater {
             otherwise
                 right--
                 update area
+    Time: O(height.length)
+    Space: O(1)
      */
     public int maxArea (int[] height) {
         int maxArea =0 ;

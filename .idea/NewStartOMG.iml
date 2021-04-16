@@ -64,6 +64,7 @@
       <sourceFolder url="file://$MODULE_DIR$/双指针" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/贪心思想" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeetCode High Frequency" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LCOF " isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

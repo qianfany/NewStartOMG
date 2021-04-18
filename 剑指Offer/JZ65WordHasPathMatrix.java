@@ -20,7 +20,7 @@ public class JZ65WordHasPathMatrix {
                            int rows, int cols, boolean[] flag, char[] str, int k) {
         int index = i * cols + j;
         if (i < 0 || j < 0 || i >= rows || j >= cols || matrix[index] != str[k]
-                || flag[index] == true) {
+                || flag[index]) {
             return false;
         }
         // base case
@@ -36,5 +36,12 @@ public class JZ65WordHasPathMatrix {
         }
         flag[index] = false;
         return false;
+    }
+
+    public static void main (String[] args) {
+        JZ65WordHasPathMatrix sol = new JZ65WordHasPathMatrix();
+        char[] matrix = {'a', 'b', 'c', 'd'};
+        char[] str = {'a', 'b', 'c', 'd'};
+        System.out.println(sol.hasPath(matrix, 2, 2, str));
     }
 }

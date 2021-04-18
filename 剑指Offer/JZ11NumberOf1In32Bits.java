@@ -9,6 +9,9 @@ public class JZ11NumberOf1In32Bits {
     Time: O(N)
     Space: O(1)
 
+
+    << left shift
+    000001 << 3 == 001000
      */
     public int numberOf1 (int n) {
         int count = 0;

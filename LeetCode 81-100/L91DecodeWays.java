@@ -46,7 +46,13 @@ public class L91DecodeWays {
             sb.deleteCharAt(sb.length() - 1);
         }
     }
+    /*
+    dynamic programming
 
+           1 <= [i, i + 1) <= 9
+          10 <= [i - 1, i + 1) <= 26
+    adding numbers
+     */
     public int numDecodingsI (String s) {
         if(s == null || s.length() == 0) {
             return 0;
@@ -61,7 +67,7 @@ public class L91DecodeWays {
                 dp[i] += dp[i-1];
             }
             if(second >= 10 && second <= 26) {
-                dp[i] += i >=2 ? dp[i-2] : 1;
+                dp[i] += i >= 2 ? dp[i-2] : 1;
             }
         }
         return dp[n-1];

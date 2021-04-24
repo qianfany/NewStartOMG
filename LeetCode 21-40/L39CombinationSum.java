@@ -49,8 +49,8 @@ public class L39CombinationSum {
 
     public static void main (String[] args) {
         L39CombinationSum sol = new L39CombinationSum();
-        int[] candidates = {2, 3, 5};
-        System.out.println(sol.combinationSum(candidates, 8));
+        int[] candidates = {1, 2, 3};
+        System.out.println(sol.combinationSum(candidates, 4));
     }
 
 }

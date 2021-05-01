@@ -1,4 +1,4 @@
-public class JZ23VerifyBSTByPostOrder {
+public class  JZ23VerifyBSTByPostOrder {
     /*
     Post-Order  [left][right][root]
                             15

@@ -22,7 +22,7 @@ public class L71SimplifyPath {
                 stack.poll();
             }
             else if(!s.equals("") && !s.equals(".")) {
-                stack.push(s);
+                stack.offerFirst(s);
             }
         }
         StringBuilder sb = new StringBuilder();

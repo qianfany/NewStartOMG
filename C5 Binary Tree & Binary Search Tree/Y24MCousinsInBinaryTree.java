@@ -6,14 +6,8 @@ public class Y24MCousinsInBinaryTree {
      * Define Cousin: two nodes are cousins of each other if they are
      * at same level and have different parents
      *
-     * Level-Order traverse, check first if both are not same levels and
+     * Level-Order traverse, check first if both are not at same levels and
      * check their parents
-     *
-     *
-     * @param root
-     * @param a
-     * @param b
-     * @return
      */
     public boolean isCousin (TreeNode root, int a, int b) {
       if (root == null) {
@@ -38,7 +32,7 @@ public class Y24MCousinsInBinaryTree {
               if (cur.right != null) {
                   if (cur.right.key == a) {
                       parentA = cur;
-                  } else if (cur.left.key == b) {
+                  } else if (cur.right.key == b) {
                       parentB = cur;
                   }
                   queue.offer(cur.right);

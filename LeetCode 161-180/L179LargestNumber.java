@@ -3,13 +3,13 @@ import java.util.Comparator;
 
 public class L179LargestNumber {
 
-    public String largestNumber (int[] nums) {
-        if (nums == null || nums.length == 0) {
+    public String largestNumber (int[] num) {
+        if (num == null || num.length == 0) {
             return "";
         }
-        String[] array = new String[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            array[i] = String.valueOf(nums[i]);
+        String[] array = new String[num.length];
+        for (int i = 0; i < num.length; i++) {
+            array[i] = String.valueOf(num[i]);
         }
         Comparator<String> comp = new Comparator<String>() {
             @Override

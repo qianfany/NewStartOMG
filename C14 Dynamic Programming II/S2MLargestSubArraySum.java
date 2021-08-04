@@ -7,7 +7,7 @@ public class S2MLargestSubArraySum {
 
     OPT (i) represents the largest subarray sum at the array index i (include the index)
     base case: OPT(0) = array[0]
-    Induction rule: OPT(i) = Max(array[i] + OPT(i - 1), OPT(i))
+    Induction rule: OPT(i) = Max(array[i] + OPT(i - 1), array[i])
     Time(n)
     Space O(n) -> O(1) by only store a previous value and the max value
      */
@@ -20,6 +20,7 @@ public class S2MLargestSubArraySum {
         }
         return result;
     }
+
 
     public int[] largestSumII (int[] array) {
         int result = Integer.MIN_VALUE;
@@ -42,6 +43,6 @@ public class S2MLargestSubArraySum {
     public static void main (String[] args) {
         S2MLargestSubArraySum sol = new S2MLargestSubArraySum();
         int[] array = {4, 2, -3, -2, 3, -1, -2, 6};
-        System.out.println(Arrays.toString(sol.largestSumII(array)));
+        System.out.println((sol.largestSum(array)));
     }
 }

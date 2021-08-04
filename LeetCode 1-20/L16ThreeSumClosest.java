@@ -43,7 +43,6 @@ public class L16ThreeSumClosest {
                     }
                 }
             }
-
         }
         return closestSum;
     }

@@ -3,7 +3,8 @@ import java.util.List;
 public class L243ShortestWordDistance {
     /*
     Always start with brute force solution
-
+    Time:   O(N^2)
+    Space:  O(1)
      */
     public int shortestDistance (String[] wordsDict, String word1, String word2) {
         int res = wordsDict.length;
@@ -35,4 +36,19 @@ public class L243ShortestWordDistance {
         }
         return res;
     }
+
+    public int shortestDistance2(String[] wordsDict, String word1, String word2) {
+        int idx = -1;
+        int minDistance = Integer.MAX_VALUE;
+        for (int i = 0; i < wordsDict.length; i++) {
+            if (wordsDict[i].equals(word1) || wordsDict[i].equals(word2)) {
+                if (idx != -1 && !wordsDict[i].equals(wordsDict[idx])) {
+                    minDistance = Math.min(minDistance, Math.abs(i - idx));
+                }
+                idx = i;
+            }
+        }
+        return minDistance;
+    }
+
 }

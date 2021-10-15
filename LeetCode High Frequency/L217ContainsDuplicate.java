@@ -3,7 +3,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class L217ContainsDuplicate {
-
+    /*
+    Time: O(n log n)
+    Space: O(n)
+     */
     public boolean containsDuplicate (int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
@@ -15,7 +18,10 @@ public class L217ContainsDuplicate {
         return false;
     }
 
-
+    /*
+    Time: O(n)
+    Space: O(n)
+     */
     public boolean containsDuplicateI (int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int x : nums) {

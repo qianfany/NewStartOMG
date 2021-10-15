@@ -44,13 +44,7 @@ public class S1MAllAnagrams {
         // TODO Auto-generated method stub
         Map<Character, Integer> map = new HashMap<Character, Integer>();
         for (char ch : s.toCharArray()) {
-            Integer count = map.get(ch);
-            if (count == null) {
-                map.put(ch, 1);
-            }
-            else {
-                map.put(ch, count + 1);
-            }
+            map.merge(ch, 1, Integer::sum);
         }
         return map;
     }

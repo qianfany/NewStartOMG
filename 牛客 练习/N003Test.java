@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Scanner;
 
 public class N003Test {
@@ -39,12 +40,6 @@ public class N003Test {
         return res;
     }
 
-    public static void main (String[] args) {
-
-        int[] array = {1, 4, 8, 3, 5, 5, 6, 2};
-        N003Test sol = new N003Test();
-        System.out.println((sol.maxNum(array, 5, 20)));
-    }
 }
 //
 //        Scanner cin = new Scanner(System.in);

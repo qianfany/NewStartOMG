@@ -26,4 +26,11 @@ public class C13LongestAscendingSubsequence {
         }
         return result;
     }
+
+
+    public static void main (String[] args) {
+        C13LongestAscendingSubsequence sol = new C13LongestAscendingSubsequence();
+        int[] longest = {5, 2, 6, 3, 4, 7, 5};
+        System.out.println(sol.longest(longest));
+    }
 }

@@ -47,7 +47,7 @@ public class XM1Decoder {
 
     public static void main (String[] args) {
         XM1Decoder sol = new XM1Decoder();
-        String input = "1121";
+        String input = "12258";
         sol.decoder(input);
     }
 

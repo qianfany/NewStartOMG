@@ -67,6 +67,8 @@
       <sourceFolder url="file://$MODULE_DIR$/LCOF " isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LeetCode201-220" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Streams" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/多线程" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyInterviewQuestions" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

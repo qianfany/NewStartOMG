@@ -69,6 +69,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Streams" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/多线程" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MyInterviewQuestions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BaseClass" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -1,6 +1,6 @@
 public class BaseClass {
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

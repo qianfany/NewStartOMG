@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class L257BinaryTreePaths extends BaseClass{
+public class L257BinaryTreePaths extends BaseObject {
 
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();

@@ -1,4 +1,4 @@
-public class L2231EvaluateBooleanBinaryTree extends BaseClass{
+public class L2231EvaluateBooleanBinaryTree extends BaseObject {
 
     public boolean evaluateTree(TreeNode root) {
         return dfs(root);

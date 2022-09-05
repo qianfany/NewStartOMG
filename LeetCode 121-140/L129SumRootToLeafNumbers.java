@@ -1,8 +1,8 @@
-public class L129SumRootToLeafNumbers {
+public class L129SumRootToLeafNumbers extends BaseObject{
     /*
                        4(4)
                     /      \
-                9(49)       0 (40)
+                 9(49)       0 (40)
                  /   \
              5(495)   1(491)
 
@@ -17,7 +17,7 @@ public class L129SumRootToLeafNumbers {
 
     private int sumNodes (TreeNode root, int currentSum) {
         if (root == null) return 0;
-        currentSum = currentSum * 10 + root.key;
+        currentSum = currentSum * 10 + root.val;
         if (root.left == null && root.right == null) {
             return currentSum;
         }

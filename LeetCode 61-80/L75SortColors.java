@@ -14,22 +14,22 @@ public class L75SortColors {
         if (nums == null || nums.length <= 1) {
             return;
         }
-        int neg = 0;
         int zero = 0;
-        int one = nums.length - 1;
+        int one = 0;
+        int two = nums.length - 1;
 
-        while (zero <= one) {
-            if (nums[zero] == 0) {
-                swap(nums, neg, zero);
-                neg++;
+        while (one <= two) {
+            if (nums[one] == 0) {
+                swap(nums, zero, one);
                 zero++;
+                one++;
             }
-            else if (nums[zero] == 1) {
-                zero++;
+            else if (nums[one] == 1) {
+                one++;
             }
             else {
-                swap(nums, zero, one);
-                one--;
+                swap(nums, one, two);
+                two--;
             }
         }
     }

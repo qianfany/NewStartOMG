@@ -1,13 +1,16 @@
-public class L112PathSum {
+public class L112PathSum extends BaseObject{
+    /*
+    Root to leaf path
 
-    public boolean hasPathSum (TreeNode root, int sum) {
+     */
+    public boolean hasPathSum (TreeNode root, int targetSum) {
         if (root == null) {
             return false;
         }
-        sum = sum - root.key;
-        if (sum == 0 && root.left == null && root.right == null) {
+        targetSum = targetSum - root.val;
+        if (targetSum == 0 && root.left == null && root.right == null) {
             return true;
         }
-        return hasPathSum(root.left, sum) || hasPathSum(root.right, sum);
+        return hasPathSum(root.left, targetSum) || hasPathSum(root.right, targetSum);
     }
 }

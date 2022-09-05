@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-public class L102BinaryTreeLevelOrderTraversal {
+public class L102BinaryTreeLevelOrderTraversal extends BaseObject {
     /**
     DFS approach:
                         4
@@ -33,9 +33,20 @@ public class L102BinaryTreeLevelOrderTraversal {
         if (height == levels.size()) {
             levels.add(new ArrayList<>());
         }
-        levels.get(height).add(root.key);
+        levels.get(height).add(root.val);
         helper(root.left, height + 1, levels);
         helper(root.right, height + 1, levels);
+    }
+
+    public static void main(String[] args) {
+        L102BinaryTreeLevelOrderTraversal sol = new L102BinaryTreeLevelOrderTraversal();
+        TreeNode root = new TreeNode(4);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(10);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+
+        System.out.println(sol.levelOrder(root));
     }
 
 
@@ -50,6 +61,20 @@ public class L102BinaryTreeLevelOrderTraversal {
      the queue is empty
      Time:   O(n)
      Space:  O(n)
+                4
+             /       \
+            2         10
+                   /       \
+                 15         7
+     [4]            size = 1    queue.poll()
+     add 4.left
+     add 4.right
+     [2, 10]        size = 2    queue.poll()
+     2.left = null 2.right = null
+     queue.poll()
+     add 10.left
+     add 10.right
+     [15, 7]
      */
     public List<List<Integer>> levelOrderBSF (TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
@@ -69,7 +94,7 @@ public class L102BinaryTreeLevelOrderTraversal {
                 if (cur.right != null) {
                     queue.offer(cur.right);
                 }
-                curList.add(cur.key);
+                curList.add(cur.val);
             }
             result.add(curList);
         }

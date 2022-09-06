@@ -11,10 +11,10 @@ public class L257BinaryTreePaths extends BaseObject {
             return list;
         }
         for (String s : binaryTreePaths(root.left)) {
-            list.add(Integer.toString(root.val) + "->" + s);
+            list.add(root.val + "->" + s);
         }
         for (String s : binaryTreePaths(root.right)) {
-            list.add(Integer.toString(root.val) + "->" + s);
+            list.add(root.val + "->" + s);
         }
         return list;
     }

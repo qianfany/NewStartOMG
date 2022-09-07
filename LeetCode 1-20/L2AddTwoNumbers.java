@@ -1,4 +1,4 @@
-public class L2AddTwoNumbers {
+public class L2AddTwoNumbers extends BaseObject{
     /*
     (2 -> 4 -> 3) + (5 -> 6 -> 4)
      7 -> 0 -> 8
@@ -19,11 +19,11 @@ public class L2AddTwoNumbers {
 
         while (l1 != null || l2 != null || carry != 0) {
             if (l1 != null) {
-                carry += l1.value;
+                carry += l1.val;
                 l1 = l1.next;
             }
             if (l2 != null) {
-                carry += l2.value;
+                carry += l2.val;
                 l2 = l2.next;
             }
             cur.next = new ListNode(carry % 10);

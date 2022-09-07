@@ -1,4 +1,4 @@
-public class L24SwapNodesInPairs {
+public class L24SwapNodesInPairs extends BaseObject{
     /*
     1 -> 2 -> 3 -> 4 -> 5 -> NULL
             ______________________
@@ -32,10 +32,11 @@ public class L24SwapNodesInPairs {
         dummy.next = head;
         ListNode cur = dummy;
         while (cur.next != null && cur.next.next != null) {
-            ListNode next = cur.next.next;
-            cur.next.next = cur.next.next.next;
-            next.next = cur.next;
+            ListNode start = cur.next;
+            ListNode next  = cur.next.next;
             cur.next = next;
+            start.next = next.next;
+            next.next = start;
             cur = cur.next.next;
         }
         return dummy.next;

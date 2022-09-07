@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class L169majorityElement {
     /**
      * Boyer-Moore Voting Algorithm
@@ -19,5 +22,19 @@ public class L169majorityElement {
             count += (num == candidate) ? 1 : -1;
         }
         return candidate;
+    }
+
+    public int majorityElementI(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        int half = nums.length / 2;
+        int res = 0;
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+            if (map.get(num) > half) {
+                res = num;
+                break;
+            }
+        }
+        return res;
     }
 }

@@ -1,6 +1,23 @@
 public class L153FindMinInRotatedSortedArray {
     /**
      * No duplication
+     * Binary Search
+     *
+     *      4   5   6   7   0   1   2
+     *      l           m           h
+     *                  m > 2       l = m + 1
+     *                      l   m   h
+     *                          m < h   h = m
+     *                      l   h       terminate
+     *                      return l
+     *
+     *      11      13      15      17
+     *      l       m               h
+     *              m < h       h = m
+     *              terminate
+     *              return l
+     *
+     *
      * Time: O(log n)
      * Space: O(1)
      * @param nums

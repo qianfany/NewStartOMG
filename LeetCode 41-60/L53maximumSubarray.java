@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class L53maximumSubarray {
     /*
     Dynamic Programming
@@ -9,6 +11,15 @@ public class L53maximumSubarray {
     Time(n)
     Space O(n) -> O(1) by only store a previous value and the max value
      */
+
+    public int maxSubArrayI(int[] nums) {
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+        }
+        return Arrays.stream(dp).max().getAsInt();
+    }
     public int maxSubArray (int[] nums) {
         int result = nums[0];
         int prev = nums[0];

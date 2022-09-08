@@ -3,6 +3,8 @@ public class L121BestTimeToBuySellStock {
             7   1   5   3   6   4
             max = 0
             min = 1
+     min    7   1   1   1   1   1
+     max    0   0   4   2   5   3
      for each step, check min = min(min, prices[i])
                     check max = max(max, prices[i] - min)
 

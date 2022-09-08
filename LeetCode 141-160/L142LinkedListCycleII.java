@@ -3,7 +3,7 @@ public class L142LinkedListCycleII {
     ____________________            Set the distance from start point to cycle = L
                 /       \           Set the distance of cycle = C
                /         \
-               |          | s f       s = L + 1/4C  f = L + 1/4C + C
+               |          | s f       s = L + 1/4C      f = L + 1/4C + C
                 \        /           2s = f        L + 1/4 C = C  L = 3/4 C which is the remaining distance
                  \______/
                                      set fast pointer back to the start, when when met, is the start of the pointer

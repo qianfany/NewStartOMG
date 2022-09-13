@@ -4,18 +4,18 @@ import java.util.List;
 
 public class L46Permutations {
     /*
-        levels: each level represents one position
-        branches: if we are on the i-th level, then we can try (n-i) branches
-                                    123
-                  /                  |                 \
-           123 swap(0,0)         213 swap(0, 1)       321 swap(0, 2)
-       /             \           /            \        /             \
- 123 swap(1,1)   132 swap(1,2) 213 swap(1,1)
-      |              |
- 123 swap(2,2)   132 swap(2,2)
+            levels: each level represents one position
+            branches: if we are on the i-th level, then we can try (n-i) branches
+                                        123
+                      /                  |                 \
+               123 swap(0,0)         213 swap(0, 1)       321 swap(0, 2)
+           /             \           /            \        /             \
+     123 swap(1,1)   132 swap(1,2) 213 swap(1,1)
+          |              |
+     123 swap(2,2)   132 swap(2,2)
 
-        Time:   O(n! * n)
-        Space:  O(n)
+            Time:   O(n! * n)
+            Space:  O(n)
      */
     public List<List<Integer>> permute (int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

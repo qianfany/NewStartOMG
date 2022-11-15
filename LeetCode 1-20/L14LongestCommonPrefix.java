@@ -10,7 +10,30 @@ public class L14LongestCommonPrefix {
     A4              ->    A14   2n
     Time: O(kn)
     Space: O(n)
+    */
+    public static String longestCommonPrefixIR(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        String pre = strs[0];
+        for (int i = 1; i < strs.length; i++) {
+            while (strs[i].indexOf(pre) != 0) {
+                // .indexOf() used for finding the prefix
+                // .indexOf() == 0, common prefix
+                pre = pre.substring(0, pre.length() - 1);
+            }
+        }
+        return pre;
+    }
 
+    public static void main(String[] args) {
+        String[] strings = {"flower", "flow", "flight"};
+        String a = "ower";
+        String b = "flower";
+        System.out.println(b.indexOf(a));
+        System.out.println(longestCommonPrefixIR(strings));
+    }
+    /*
     Binary Reduction
     A1
     A2  ->   A12 2n
@@ -22,7 +45,9 @@ public class L14LongestCommonPrefix {
     A8  ->   A78 2n
     Time: O(kn)
     Space: O(kn)
+    */
 
+    /*
     Heap k pointers
     minHeap stores all elements pointed by the k pointers
     max element = the maximum element in the min Heap
@@ -40,17 +65,4 @@ public class L14LongestCommonPrefix {
 
      check only the prefix
      */
-    public String longestCommonPrefix (String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return "";
-        }
-        String pre = strs[0];
-        for (int i =1; i < strs.length; i++) {
-            while (strs[i].indexOf(pre) != 0) {
-                pre = pre.substring(0, pre.length() - 1);
-                // shorten the reference string
-            }
-        }
-        return pre;
-    }
 }

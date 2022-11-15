@@ -2,6 +2,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class L13RomanToInteger {
+
+    /*
+    find the first two symbol, compare between 2,
+    if 1 < 2        sum += (2 - 1)
+    else            sum += 1
+     */
     static Map<String, Integer> values = new HashMap<>();
 
     static {

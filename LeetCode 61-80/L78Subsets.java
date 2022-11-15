@@ -34,6 +34,13 @@ public class L78Subsets {
         cur.add(nums[start]);
         helper(nums, start + 1, cur, res);
         cur.remove(cur.size() -1);
+        // 不加
         helper(nums, start + 1, cur, res);
+    }
+
+    public static void main(String[] args) {
+        L78Subsets sol = new L78Subsets();
+        int[] nums = {1, 2, 3};
+        System.out.println(sol.subsets(nums));
     }
 }
